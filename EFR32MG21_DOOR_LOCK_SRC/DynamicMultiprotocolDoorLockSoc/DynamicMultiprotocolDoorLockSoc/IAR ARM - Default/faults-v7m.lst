@@ -1,0 +1,236 @@
+                                 - faults-v7m -                       Page    1
+
+    1                           /*********************************************
+                                ******************************//**
+    2                            * @file
+    3                            * @brief Faults
+    4                            *********************************************
+                                **********************************
+    5                            * # License
+    6                            * <b>Copyright 2018 Silicon Laboratories Inc.
+                                 www.silabs.com</b>
+    7                            *********************************************
+                                **********************************
+    8                            *
+    9                            * The licensor of this software is Silicon
+                                 Laboratories Inc. Your use of this
+   10                            * software is governed by the terms of
+                                 Silicon Labs Master Software License
+   11                            * Agreement (MSLA) available at
+   12                            * www.silabs.com/about-us/legal/master-softwa
+                                re-license-agreement. This
+   13                            * software is distributed to you in Source
+                                 Code format and is governed by the
+   14                            * sections of the MSLA applicable to Source
+                                 Code.
+   15                            *
+   16                            *********************************************
+                                *********************************/
+   17                           
+   18                           #include "../compiler/asm.h"
+   19                           
+   20                                   __IMPORT__ halInternalCrashHandler
+   21                                   __IMPORT__ halInternalSysReset
+   22                           
+   23                           // define the values the link register can
+                                 have on entering an exception
+   24                           __EQU__(EXC_RETURN_HANDLER_MSP, 0xFFFFFFF1)
+   25                           __EQU__(EXC_RETURN_THREAD_MSP,  0xFFFFFFF9)
+   26                           __EQU__(EXC_RETURN_THREAD_PSP,  0xFFFFFFFD)
+   27                           
+   28                           // define stack bytes needed by halCrashHandle
+                                r()
+   29                           __EQU__(CRASH_STACK_SIZE, 64)
+   30                           
+   31                           //--------------------------------------------
+                                ----------------------------------
+   32                           //
+   33                           // Various types of crashes generate NMIs,
+                                 hard, bus, memory, usage and debug 
+   34                           // monitor faults that vector to the routines
+                                 defined here. 
+   35                           //
+   36                           // Although all of these could vector directly
+                                 to the common fault handler,
+   37                           // each is given its own entry point to allow
+                                 setting a breakpoint for a 
+   38                           // particular type of crash.
+   39                           //
+   40                           //--------------------------------------------
+                                ----------------------------------
+   41                           
+   42                           
+   43                           #ifndef EMBER_INTERRUPT_TEST
+   44                                   __CODE__
+   45                                   __THUMB__
+   46                                   __EXPORT__ NMI_Handler
+   47                           NMI_Handler:
+   48    00000000 ........              b.w fault
+   49                           #endif
+   50                           
+   51                           
+   52                           #ifndef EMBER_ACCESS_TEST
+   53                                   __CODE__
+   54                                   __THUMB__
+   55                                   __EXPORT__ HardFault_Handler
+   56                           HardFault_Handler:
+   57    00000000 ........              b.w fault
+   58                           
+   59                                   __CODE__
+   60                                   __THUMB__
+                                 - faults-v7m -                       Page    2
+
+   61                                   __EXPORT__ BusFault_Handler
+   62                           BusFault_Handler:
+   63    00000000 ........              b.w fault
+   64                           
+   65                           // MemManage_Handler is now consumed by the
+                                 Simple MPU Driver in emdrv, which
+   66                           // will call mpu_fault_handler
+   67                                   __CODE__
+   68                                   __THUMB__
+   69                                   __EXPORT__ mpu_fault_handler
+   70                           mpu_fault_handler:
+   71    00000000 ........              b.w fault
+   72                           
+   73                                   __CODE__
+   74                                   __THUMB__
+   75                                   __EXPORT__ UsageFault_Handler
+   76                           UsageFault_Handler:
+   77    00000000 ........              b.w fault
+   78                           
+   79                           #if (__CORTEX_M >= 23U)
+   85                           #endif
+   86                           
+   87                           #endif
+   88                           
+   89                                   __CODE__
+   90                                   __THUMB__
+   91                                   __EXPORT__ DebugMon_Handler
+   92                           DebugMon_Handler:
+   93    00000000 ........              b.w fault
+   94                           
+   95                                   __CODE__
+   96                                   __THUMB__
+   97                                   __EXPORT__ uninitializedIsr
+   98                           uninitializedIsr:
+   99    00000000 ........              b.w fault
+  100                           
+  101                           
+  102                           //--------------------------------------------
+                                ----------------------------------
+  103                           // Common fault handler prolog processing
+  104                           //
+  105                           //   determines which of the three possible
+                                 EXC_RETURN values is in lr,
+  106                           //   then uses lr to save processor registers
+                                 r0-r12 to the crash info area
+  107                           //
+  108                           //   restores lr's value, and then saves lr,
+                                 msp and psp to the crash info area
+  109                           //
+  110                           //   checks the stack pointer to see if it is
+                                 valid and won't overwrite the crash
+  111                           //   info area - if needed, resets the stack
+                                 pointer to the top of the stack
+  112                           //   
+  113                           //   calls halInternalCrashHandler() to
+                                 continue saving crash data. This 
+  114                           //   C function can finish crash processing
+                                 without risking further faults.
+  115                           //   It returns the fault reason, and this is
+                                 passed to halInternalSysReset() 
+  116                           //   that forces a processor reset.
+  117                           //
+  118                           //--------------------------------------------
+                                ----------------------------------
+  119                                   __CODE__
+  120                                   __THUMB__
+  121                                   __EXPORT__ fault
+  122                           fault:
+  123    00000000 72B6                  cpsid   i               // in case the
+                                                                 fault priority
+                                                                 is low
+  124    00000002 1EF0080F              tst     lr, #8          // test
+                                                      EXC_RETURN for handler vs
+                                                      thread mode
+  125    00000006 08D0                  beq.n   fault_handler_msp
+  126    00000008 1EF0040F              tst     lr, #4          // thread mode:
+                                                      test for msp versus
+                                                      psp
+                                 - faults-v7m -                       Page    3
+
+  127    0000000C 0BD0                  beq.n   fault_thread_msp
+  128                           
+  129                           fault_thread_psp:
+  130    0000000E DFF848E0              ldr     lr, =__BEGIN_RESETINFO__(4)
+  131    00000012 AEE8FF1F              stmia.w lr!, {r0-r12}
+  132    00000016 1148                  ldr     r0, =EXC_RETURN_THREAD_PSP
+  133    00000018 0AE0                  b.n     fault_continue
+  134                           
+  135                           fault_handler_msp:
+  136    0000001A DFF83CE0              ldr     lr, =__BEGIN_RESETINFO__(4)
+  137    0000001E AEE8FF1F              stmia.w lr!, {r0-r12}
+  138    00000022 0F48                  ldr     r0, =EXC_RETURN_HANDLER_MSP
+  139    00000024 04E0                  b.n     fault_continue
+  140                           
+  141                           fault_thread_msp:
+  142    00000026 DFF830E0              ldr     lr, =__BEGIN_RESETINFO__(4)
+  143    0000002A AEE8FF1F              stmia.w lr!, {r0-r12}
+  144    0000002E 0D48                  ldr     r0, =EXC_RETURN_THREAD_MSP
+  145                           //        b.n     fault_continue
+  146                           
+  147                           fault_continue:
+  148    00000030 6946                  mov     r1, sp
+  149    00000032 EFF30982              mrs     r2, PSP
+  150    00000036 8EE80700              stm     lr, {r0-r2}     // save lr, msp
+                                                      and psp
+  151    0000003A 8646                  mov     lr, r0          // restore
+                                                      lr
+  152                           
+  153                           fault_check_sp:
+  154                                   //  make sure that the current stack
+                                 pointer is within the minimum region
+  155                                   //  that must be occupied by the stack
+                                 and that there is some headroom
+  156                                   //  for the crash handler's stack.
+  157    0000003C 0A48                  ldr     r0, =__BEGIN_STACK__(CRASH_STAC
+                                                     K_SIZE)
+  158    0000003E 0B4C                  ldr     r4, =__END_STACK__(0)
+  159    00000040 8545                  cmp     sp, r0
+  160    00000042 01D3                  blo.n   fault_fix_sp
+  161                                   // compare to make sure SP otherwise
+                                 looks valid
+  162    00000044 A545                  cmp     sp, r4
+  163    00000046 01D3                  blo.n   fault_sp_okay
+  164                           fault_fix_sp:
+  165    00000048 84F30888              msr     msp, r4
+  166                           fault_sp_okay:
+  167    0000004C ........              bl.w    halInternalCrashHandler //
+                                                  saves rest of data, returns
+                                                  reason
+  168    00000050 84F30888              msr     msp, r4                 // set
+                                                       sp to top of stack
+                                                       segment
+  169    00000054 ........              bl.w    halInternalSysReset     // call
+                                                  with reset reason in R0    
+                                                  
+  170                           
+  170.1                                  TABLE
+  170.2  00000058 ........              Reference on line 130,136,142
+  170.3  0000005C FDFFFFFF              Reference on line 132
+  170.4  00000060 F1FFFFFF              Reference on line 138
+  170.5  00000064 F9FFFFFF              Reference on line 144
+  170.6  00000068 ........              Reference on line 157
+  170.7  0000006C ........              Reference on line 158
+  171                                   __END__
+##############################
+#           CRC:0            #
+#        Errors:   0         #
+#        Warnings: 0         #
+#         Bytes: 140         #
+##############################
+
+
+
+

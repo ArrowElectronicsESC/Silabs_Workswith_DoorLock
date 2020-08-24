@@ -1,0 +1,96 @@
+                                 - isr-stubs -                        Page    1
+
+    1                           //--------------------------------------------
+                                ----------------------------------
+    2                           // @file hal/micro/cortexm3/isr-stubs.s79
+    3                           // @brief Stubs for all exception handlers
+                                 (ISRs)
+    4                           // 
+    5                           // NOTE: You should NOT have to change this
+                                 file to instatiate your own ISR!
+    6                           //
+    7                           // By providing a *weak* function here, every
+                                 vector in the interrupt table is
+    8                           // guaranteed to be defined.  These functions
+                                 will be overridden during link
+    9                           // time whenever the same function (symbol)
+                                 name is used normally in another
+   10                           // source file.
+   11                           //
+   12                           // RESULT:  Simply define whichever ISRs you
+                                 need in your application and this
+   13                           // file will fill in the gaps during
+                                 linking.
+   14                           //
+   15                           // Copyright 2007 by Ember Corporation. All
+                                 rights reserved.                *80*
+   16                           //--------------------------------------------
+                                ----------------------------------
+   17                           
+   18                           //Normally the default NVIC_CONFIG file would
+                                 be defined in the PLATFORM_HEADER
+   19                           //but this assembly file does not include the
+                                 PLATFORM_HEADER (it can't
+   20                           //because this is assembly, and the header is
+                                 for c).
+   21                           #ifndef NVIC_CONFIG
+   22                             #define NVIC_CONFIG "hal/micro/cortexm3/efm3
+                                2/nvic-config.h"
+   23                           #endif
+   24                           #include "../compiler/asm.h"
+   25                           
+   26                           #define SEGMENT() \
+   28                           #define SEGMENT2() \
+   30                           // NOTE: Any use of white space in this file
+                                 is ignored by the preprocessor.
+   31                           //       Since assembly files have white space
+                                 requirements, the white space
+   32                           //       needed is implemented in the
+                                 nvic-config.h file itself.
+   33                           
+   34                           #define EXCEPTION(vectorNumber, functionName,
+                                 deviceIrqn, deviceIrqHandler, priorityLevel,
+                                 subpriority) \
+   36                           #define PERM_EXCEPTION(vectorNumber,
+                                 functionName, deviceIrqn, deviceIrqHandler)
+   37                           #include NVIC_CONFIG
+   38                           #undef  PERM_EXCEPTION
+   39                           #undef  EXCEPTION
+   40                           
+   41                           
+   42                           
+   43                           #define EXCEPTION(vectorNumber, functionName,
+                                 deviceIrqn, deviceIrqHandler, priorityLevel,
+                                 subpriority) \
+   45                           #define PERM_EXCEPTION(vectorNumber,
+                                 functionName, deviceIrqn, deviceIrqHandler)
+   46                           #include NVIC_CONFIG
+   47                           #undef  PERM_EXCEPTION
+   48                           #undef  EXCEPTION
+   49                           
+   50                           
+   51                           // Every function defined above will reference
+                                 the following code
+   52                           // Since each function is still defined
+                                 PUBWEAK with its own segment, the
+   53                           // linker will still do it's job and stub out
+                                 only the functions that need it.
+   54                           // By having all the stubs reference the same
+                                 code, we save 96 bytes!
+   55                                   __IMPORT__ uninitializedIsr
+                                 - isr-stubs -                        Page    2
+
+   56    00000000 ........              B   uninitializedIsr
+   57                           
+   58                           
+   59                                   __END__
+##############################
+#           CRC:0            #
+#        Errors:   0         #
+#        Warnings: 0         #
+#          Bytes: 4          #
+##############################
+
+
+
+
