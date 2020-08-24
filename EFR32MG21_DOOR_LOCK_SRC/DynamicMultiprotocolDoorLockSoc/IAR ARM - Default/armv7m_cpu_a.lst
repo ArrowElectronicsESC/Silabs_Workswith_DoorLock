@@ -1,0 +1,346 @@
+                                - armv7m_cpu_a -                      Page    1
+
+    1                           ;
+    2                           ;/********************************************
+                                *******************************//**
+    3                           ; * @file
+    4                           ; * @brief CPU - ARM Cortex-M Port
+    5                           ; ********************************************
+                                ***********************************
+    6                           ; * # License
+    7                           ; * <b>Copyright 2018 Silicon Laboratories
+                                 Inc. www.silabs.com</b>
+    8                           ; ********************************************
+                                ***********************************
+    9                           ; *
+   10                           ; * The licensor of this software is Silicon
+                                 Laboratories Inc.  Your use of this
+   11                           ; * software is governed by the terms of
+                                 Silicon Labs Master Software License
+   12                           ; * Agreement (MSLA) available at
+   13                           ; * www.silabs.com/about-us/legal/master-softw
+                                are-license-agreement.  This
+   14                           ; * software is distributed to you in Source
+                                 Code format and is governed by the
+   15                           ; * sections of the MSLA applicable to Source
+                                 Code.
+   16                           ; *
+   17                           ; ********************************************
+                                **********************************/
+   18                           
+   19                           ;*********************************************
+                                ***********************************************
+                                ********//**
+   20                           ;* @note       (1) This port targets the
+                                 following:
+   21                           ;*               Core      : ARMv7M Cortex-M
+   22                           ;*               Mode      : Thumb-2
+                                 ISA
+   23                           ;*               Toolchain : IAR Compiler
+   24                           ;*********************************************
+                                ***********************************************
+                                ***********/
+   25                           
+   26                           
+   27                           ;*********************************************
+                                ***********************************************
+                                ************
+   28                           ;                                          
+                                 PUBLIC FUNCTIONS
+   29                           ;*********************************************
+                                ***********************************************
+                                ************
+   30                           
+   31                                   PUBLIC  CPU_CntLeadZeros
+   32                                   PUBLIC  CPU_CntTrailZeros
+   33                                   PUBLIC  CPU_RevBits
+   34                           
+   35                           
+   36                           ;*********************************************
+                                ***********************************************
+                                ************
+   37                           ;                                      CODE
+                                 GENERATION DIRECTIVES
+   38                           ;*********************************************
+                                ***********************************************
+                                ************
+   39                           
+   40                                   RSEG CODE:CODE:NOROOT(2)
+   41                                   THUMB
+   42                           
+   43                           
+   44                           ;*********************************************
+                                ***********************************************
+                                ************
+   45                           ;                                        
+                                 CPU_CntLeadZeros()
+   46                           ;                                        COUNT
+                                 LEADING ZEROS
+   47                           ;
+   48                           ; Description : Counts the number of
+                                - armv7m_cpu_a -                      Page    2
+
+                                 contiguous, most-significant, leading zero
+                                 bits before the 
+   49                           ;                   first binary one bit in a
+                                 data value.
+   50                           ;
+   51                           ; Prototype   : CPU_DATA  CPU_CntLeadZeros(CPU
+                                _DATA  val);
+   52                           ;
+   53                           ; Argument(s) : val         Data value to
+                                 count leading zero bits.
+   54                           ;
+   55                           ; Return(s)   : Number of contiguous,
+                                 most-significant, leading zero bits in
+                                 'val'.
+   56                           ;
+   57                           ; Caller(s)   : Application.
+   58                           ;
+   59                           ;               This function is an INTERNAL
+                                 CPU module function but MAY be called by
+                                 application 
+   60                           ;               function(s).
+   61                           ;
+   62                           ; Note(s)     : (1) (a) Supports 32-bit data
+                                 value size as configured by 'CPU_DATA' (see
+                                 'cpu.h  
+   63                           ;                       CPU WORD CONFIGURATION
+                                  Note #1').
+   64                           ;
+   65                           ;                   (b) For 32-bit values
+                                 :
+   66                           ;
+   67                           ;                             b31  b30  b29 
+                                 ...  b04  b03  b02  b01  b00    # Leading
+                                 Zeros
+   68                           ;                             ---  ---  ---   
+                                    ---  ---  ---  ---  ---    ---------------
+   69                           ;                              1    x    x    
+                                     x    x    x    x    x           
+                                 0
+   70                           ;                              0    1    x    
+                                     x    x    x    x    x           
+                                 1
+   71                           ;                              0    0    1    
+                                     x    x    x    x    x           
+                                 2
+   72                           ;                              :    :    :    
+                                     :    :    :    :    :           
+                                 :
+   73                           ;                              :    :    :    
+                                     :    :    :    :    :           
+                                 :
+   74                           ;                              0    0    0    
+                                     1    x    x    x    x           27
+   75                           ;                              0    0    0    
+                                     0    1    x    x    x           28
+   76                           ;                              0    0    0    
+                                     0    0    1    x    x           29
+   77                           ;                              0    0    0    
+                                     0    0    0    1    x           30
+   78                           ;                              0    0    0    
+                                     0    0    0    0    1           31
+   79                           ;                              0    0    0    
+                                     0    0    0    0    0           32
+   80                           ;
+   81                           ;
+   82                           ;               (2) MUST be defined in
+                                 'cpu_a.asm' (or 'cpu_c.c') if CPU_CFG_LEAD_ZER
+                                OS_ASM_PRESENT is 
+   83                           ;                   #define'd in 'cpu_port.h'
+   84                           ;*********************************************
+                                ***********************************************
+                                ************
+   85                           
+   86                           CPU_CntLeadZeros:
+   87    00000000 B0FA80F0              CLZ     R0, R0                         
+                                                      ; Count leading
+                                                      zeros
+   88    00000004 7047                  BX      LR
+                                - armv7m_cpu_a -                      Page    3
+
+   89                           
+   90                           
+   91                           ;*********************************************
+                                ***********************************************
+                                ************
+   92                           ;                                        
+                                 CPU_CntTrailZeros()
+   93                           ;                                        COUNT
+                                 TRAILING ZEROS
+   94                           ;
+   95                           ; Description : Counts the number of
+                                 contiguous, least-significant, trailing zero
+                                 bits before the 
+   96                           ;                   first binary one bit in a
+                                 data value.
+   97                           ;
+   98                           ; Prototype   : CPU_DATA  CPU_CntTrailZeros(CP
+                                U_DATA  val);
+   99                           ;
+  100                           ; Argument(s) : val         Data value to
+                                 count trailing zero bits.
+  101                           ;
+  102                           ; Return(s)   : Number of contiguous,
+                                 least-significant, trailing zero bits in
+                                 'val'.
+  103                           ;
+  104                           ; Caller(s)   : Application.
+  105                           ;
+  106                           ;               This function is an INTERNAL
+                                 CPU module function but MAY be called by
+                                 application 
+  107                           ;               function(s).
+  108                           ;
+  109                           ; Note(s)     : (1) (a) Supports 32-bit data
+                                 value size as configured by 'CPU_DATA' (see
+                                 'cpu.h  
+  110                           ;                       CPU WORD CONFIGURATION
+                                  Note #1').
+  111                           ;
+  112                           ;                   (b) For 32-bit values
+                                 :
+  113                           ;
+  114                           ;                             b31  b30  b29 
+                                 b28  b27  ...  b02  b01  b00    # Trailing
+                                 Zeros
+  115                           ;                             ---  ---  --- 
+                                 ---  ---       ---  ---  ---    --------------
+                                --
+  116                           ;                              x    x    x   
+                                 x    x         x    x    1           
+                                 0
+  117                           ;                              x    x    x   
+                                 x    x         x    1    0           
+                                 1
+  118                           ;                              x    x    x   
+                                 x    x         1    0    0           
+                                 2
+  119                           ;                              :    :    :   
+                                 :    :         :    :    :           
+                                 :
+  120                           ;                              :    :    :   
+                                 :    :         :    :    :           
+                                 :
+  121                           ;                              x    x    x   
+                                 x    1         0    0    0          
+                                 27
+  122                           ;                              x    x    x   
+                                 1    0         0    0    0          
+                                 28
+  123                           ;                              x    x    1   
+                                 0    0         0    0    0          
+                                 29
+  124                           ;                              x    1    0   
+                                 0    0         0    0    0          
+                                 30
+  125                           ;                              1    0    0   
+                                 0    0         0    0    0          
+                                 31
+                                - armv7m_cpu_a -                      Page    4
+
+  126                           ;                              0    0    0   
+                                 0    0         0    0    0          
+                                 32
+  127                           ;
+  128                           ;
+  129                           ;               (2) MUST be defined in
+                                 'cpu_a.asm' (or 'cpu_c.c') if CPU_CFG_TRAIL_ZE
+                                ROS_ASM_PRESENT is 
+  130                           ;                   #define'd in 'cpu_cfg.h'
+                                 or 'cpu.h'.
+  131                           ;*********************************************
+                                ***********************************************
+                                ************
+  132                           
+  133                           CPU_CntTrailZeros:
+  134    00000006 90FAA0F0              RBIT    R0, R0                         
+                                                      ; Reverse bits
+  135    0000000A B0FA80F0              CLZ     R0, R0                         
+                                                      ; Count trailing
+                                                      zeros
+  136    0000000E 7047                  BX      LR
+  137                           
+  138                           
+  139                           ;*********************************************
+                                ***********************************************
+                                ************
+  140                           ;                                           
+                                 CPU_RevBits()
+  141                           ;                                           
+                                 REVERSE BITS
+  142                           ;
+  143                           ; Description : Reverses the bits in a data
+                                 value.
+  144                           ;
+  145                           ; Prototypes  : CPU_DATA  CPU_RevBits(CPU_DATA
+                                  val);
+  146                           ;
+  147                           ; Argument(s) : val         Data value to
+                                 reverse bits.
+  148                           ;
+  149                           ; Return(s)   : Value with all bits in 'val'
+                                 reversed (see Note #1).
+  150                           ;
+  151                           ; Caller(s)   : Application.
+  152                           ;
+  153                           ;               This function is an INTERNAL
+                                 CPU module function but MAY be called by
+                                 application function(s).
+  154                           ;
+  155                           ; Note(s)     : (1) The final, reversed data
+                                 value for 'val' is such that :
+  156                           ;
+  157                           ;                       'val's final bit  0   
+                                    =  'val's original bit  N
+  158                           ;                       'val's final bit  1   
+                                    =  'val's original bit (N - 1)
+  159                           ;                       'val's final bit  2   
+                                    =  'val's original bit (N - 2)
+  160                           ;
+  161                           ;                               ...           
+                                                ...
+  162                           ;
+  163                           ;                       'val's final bit (N -
+                                 2)  =  'val's original bit  2
+  164                           ;                       'val's final bit (N -
+                                 1)  =  'val's original bit  1
+  165                           ;                       'val's final bit  N   
+                                    =  'val's original bit  0
+  166                           ;
+  167                           ;               (2) This function is
+                                 DEPRECATED and will be removed in a future
+                                 version of this product.
+  168                           ;*********************************************
+                                ***********************************************
+                                ************
+  169                           
+  170                           CPU_RevBits:
+  171    00000010 90FAA0F0              RBIT    R0, R0                         
+                                - armv7m_cpu_a -                      Page    5
+
+                                                      ; Reverse bits
+  172    00000014 7047                  BX      LR
+  173                           
+  174                           
+  175                           ;*********************************************
+                                ***********************************************
+                                ************
+  176                           ;                                     CPU
+                                 ASSEMBLY PORT FILE END
+  177                           ;*********************************************
+                                ***********************************************
+                                ************
+  178                           
+  179                                   END
+##############################
+#           CRC:0            #
+#        Errors:   0         #
+#        Warnings: 0         #
+#         Bytes: 22          #
+##############################
+
+
+
+
