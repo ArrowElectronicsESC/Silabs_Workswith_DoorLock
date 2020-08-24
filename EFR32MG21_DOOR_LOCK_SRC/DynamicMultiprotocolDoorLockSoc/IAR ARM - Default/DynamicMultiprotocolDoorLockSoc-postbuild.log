@@ -1,6 +1,0 @@
-INFO:root:Creation of 32 bit srec file:  "C:\PROGRA~2\IARSYS~1\EMBEDD~1.4\arm/bin/ielftool.exe" "DynamicMultiprotocolDoorLockSoc.out" --srec --srec-s3only "DynamicMultiprotocolDoorLockSoc.s37"
-INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4\developer\adapter_packs\commander\commander.exe gbl create "DynamicMultiprotocolDoorLockSoc.gbl" --app "DynamicMultiprotocolDoorLockSoc.s37" --device EFR32MG21A020F1024IM32
-INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
-INFO:root:Creation of 32 bit srec file:  "C:\PROGRA~2\IARSYS~1\EMBEDD~1.4\arm/bin/ielftool.exe" "DynamicMultiprotocolDoorLockSoc.out" --srec --srec-s3only "DynamicMultiprotocolDoorLockSoc.s37"
-INFO:root:Creation of gbl file: C:\SiliconLabs\SimplicityStudio\v4\developer\adapter_packs\commander\commander.exe gbl create "DynamicMultiprotocolDoorLockSoc.gbl" --app "DynamicMultiprotocolDoorLockSoc.s37" --device EFR32MG21A020F1024IM32
-INFO:root:Creation of ota file:  echo Image-builder not invoked since 'OTA Bootload Cluster Policy plugin' is not enabled
