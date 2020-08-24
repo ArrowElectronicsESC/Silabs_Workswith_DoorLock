@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!--Copyright 2011 Bluetooth SIG, Inc. All rights reserved.-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Blood Pressure Feature"
+    type="org.bluetooth.characteristic.blood_pressure_feature" uuid="2A49"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        <Abstract>
+            The Blood Pressure Feature characteristic is used to describe the supported features of
+            the Blood Pressure Sensor.
+        </Abstract>
+    </InformativeText>
+    <Value>
+        <Field name="Blood Pressure Feature">
+            <Requirement>Mandatory</Requirement>
+            <Format>16bit</Format>
+            <BitField>
+                <Bit name="Body Movement Detection Support bit" index="0" size="1">
+                    <Enumerations>
+                        <Enumeration key="0"
+                            value="Body Movement Detection feature not supported" />
+                        <Enumeration key="1" value="Body Movement Detection feature supported" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Cuff Fit Detection Support bit" index="1" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="Cuff Fit Detection feature not supported" />
+                        <Enumeration key="1" value="Cuff Fit Detection feature supported" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Irregular Pulse Detection Support bit" index="2" size="1">
+                    <Enumerations>
+                        <Enumeration key="0"
+                            value="Irregular Pulse Detection feature not supported" />
+                        <Enumeration key="1" value="Irregular Pulse Detection feature supported" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Pulse Rate Range Detection Support bit" index="3" size="1">
+                    <Enumerations>
+                        <Enumeration key="0"
+                            value="Pulse Rate Range Detection feature not supported" />
+                        <Enumeration key="1" value="Pulse Rate Range Detection feature supported" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Measurement Position Detection Support bit" index="4" size="1">
+                    <Enumerations>
+                        <Enumeration key="0"
+                            value="Measurement Position Detection feature not supported" />
+                        <Enumeration key="1"
+                            value="Measurement Position Detection feature supported" />
+                    </Enumerations>
+                </Bit>
+
+                <Bit name="Multiple Bond Support bit" index="5" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="Multiple Bonds not supported" />
+                        <Enumeration key="1" value="Multiple Bonds supported" />
+                    </Enumerations>
+                </Bit>
+                <ReservedForFutureUse index="6" size="10" />
+            </BitField>
+        </Field>
+    </Value>
+</Characteristic>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="@dimen/swipe_button_height" />
+            <corners android:radius="100dp" />
+            <solid android:color="@color/silabs_red" />
+        </shape>
+    </item>
+</selector>

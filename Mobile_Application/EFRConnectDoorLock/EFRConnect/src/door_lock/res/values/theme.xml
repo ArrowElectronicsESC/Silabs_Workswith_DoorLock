@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="keyboard_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/silabs_white</item>
+        <item name="android:background">@drawable/keypad_button_bg</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
+    <style name="keyboard_number_button" parent="keyboard_button">
+        <item name="android:tag">number_button</item>
+    </style>
+
+    <style name="DoorLockTheme" parent="AppTheme.AppBarOverlay">
+        <item name="colorAccent">@color/primary</item>
+        <item name="colorControlHighlight">@color/primaryDarker</item>
+        <item name="android:textColor">@color/silabs_white</item>
+        <item name="android:textColorHint">@color/text_dark_hint</item>
+    </style>
+
+    <style name="DoorLockTextStyle" parent="DoorLockTheme">
+        <item name="android:textColor">@color/silabs_black</item>
+        <item name="android:textColorHint">@color/text_dark_hint</item>
+        <item name="android:textSize">@dimen/door_lock_label_text_size</item>
+    </style>
+
+    <style name="DoorLockTextValueStyle" parent="DoorLockTheme">
+        <item name="android:textColor">@color/silabs_black</item>
+        <item name="android:textSize">@dimen/door_lock_label_value_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColorHint">@color/text_light_hint</item>
+    </style>
+
+
+</resources>

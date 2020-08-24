@@ -1,0 +1,157 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="BaseAppThemeOverride.Light">
+        <item name="colorAccent">@color/primary</item>
+        <item name="colorControlHighlight">@color/primaryDarker</item>
+        <item name="android:windowBackground">@drawable/app_spash_screen</item>
+
+    </style>
+
+    <!-- Styles -->
+    <style name="HeadLine" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:textSize">@dimen/text_size_headline</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Subhead" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textSize">@dimen/text_size_subhead</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">none</item>
+    </style>
+
+    <style name="Body" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Caption" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/text_size_caption</item>
+        <item name="android:textColor">?android:attr/textColorHint</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Tab" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:textSize">@dimen/text_size_tab</item>
+        <item name="android:textColor">@color/device_tab_text</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:background">?attr/listChoiceBackgroundIndicator</item>
+    </style>
+
+
+    <style name="SwitchText" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/empty_thermo_subheader_text_size</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+    <!-- Bottom navigation styles -->
+    <style name="Widget.BottomNavigationViewInactive" parent="Widget.Design.BottomNavigationView">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/silabs_subtle_text</item>
+        <item name="android:textSize">@dimen/bottom_navigation_text_size</item>
+    </style>
+
+    <style name="Widget.BottomNavigationViewActive" parent="Widget.Design.BottomNavigationView">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/silabs_blue</item>
+        <item name="android:textSize">@dimen/bottom_navigation_text_size</item>
+    </style>
+    <!-- =========== -->
+
+    <style name="TextAppearance.ToolbarTitle" parent="">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/toolbar_title_size</item>
+        <item name="android:textColor">@color/silabs_white</item>
+    </style>
+
+    <style name="TextAppearance.TabText" parent="">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/tab_text_size</item>
+        <item name="android:textColor">@color/silabs_white</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <!-- Styles apply styling to one particular View/widget/etc and doesn't propagate to its children. -->
+    <style name="BaseToolbarStyleCommon" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/toolbar_background</item>
+    </style>
+
+    <style name="BaseToolbarStyleOverride" parent="BaseToolbarStyleCommon">
+        <!-- Empty here, but can be filled in config-specific values folder -->
+        <item name="theme">@style/ToolbarTheme</item>
+    </style>
+
+    <style name="ToolbarStyle" parent="BaseToolbarStyleOverride">
+        <!-- When overriding this style, you can customize the following attributes: -->
+        <!--<item name="titleTextAppearance">@android:style/TextAppearance</item>-->
+        <!--<item name="subtitleTextAppearance">@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle</item>-->
+        <!--<item name="android:minHeight">?attr/actionBarSize</item>-->
+        <!--<item name="titleMargins">4dp</item>-->
+        <!--<item name="maxButtonHeight">56dp</item>-->
+        <!--<item name="collapseIcon">?attr/homeAsUpIndicator</item>-->
+        <!--<item name="collapseContentDescription">@string/abc_toolbar_collapse_description</item>-->
+        <!--<item name="contentInsetStart">16dp</item>-->
+    </style>
+
+
+    <style name="BaseAppThemeCommon.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="toolbarStyle">@style/ToolbarStyle</item>
+
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDarker</item>
+
+        <item name="android:textColorPrimary">@color/text_primary_light</item>
+        <item name="android:textColorSecondary">@color/text_secondary_light</item>
+        <item name="android:textColorHint">@color/text_light_hint</item>
+    </style>
+
+    <style name="BaseAppThemeOverride.Light" parent="BaseAppThemeCommon.Light">
+        <!-- Empty here, but can be filled in config-specific values folder -->
+    </style>
+
+
+    <style name="BaseAppThemeCommon.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="toolbarStyle">@style/ToolbarStyle</item>
+
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDarker</item>
+
+        <item name="android:textColorPrimary">@color/text_primary_dark</item>
+        <item name="android:textColorSecondary">@color/text_secondary_dark</item>
+        <item name="android:textColorHint">@color/text_dark_hint</item>
+    </style>
+
+    <style name="ThermoLabelText" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/thermo_label_text_size</item>
+        <item name="android:color">@color/boulder</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="ThermoValueText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/thermo_value_text_size</item>
+        <item name="android:color">@color/masala</item>
+    </style>
+
+    <style name="ThermoGraphTimeText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/thermo_graph_time_text_size</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="BaseAppThemeCommon.Dark" />
+</resources>

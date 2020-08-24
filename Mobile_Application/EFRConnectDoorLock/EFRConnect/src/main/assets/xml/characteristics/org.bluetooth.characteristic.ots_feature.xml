@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!--
+Copyright 2015 Bluetooth SIG, Inc. All rights reserved.
+-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="OTS Feature"
+    approved="Yes" last-modified="2015-11-19" type="org.bluetooth.characteristic.ots_feature"
+    uuid="2ABD"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        The OTS Feature characteristic is defined in the Object Transfer Service Section 3.1 and its
+        sub-sections.
+    </InformativeText>
+</Characteristic>

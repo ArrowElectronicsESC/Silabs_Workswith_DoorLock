@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?><!--<?xml-stylesheet type="text/xsl" href="FieldBasedDisplay.xslt"?>-->
+<!-- Created with Liquid XML Studio Designer Edition 9.1.10.3537 (http://www.liquid-technologies.com) -->
+<!--Copyright 2011 Bluetooth SIG, Inc. All rights reserved.-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="LN Feature"
+    approved="Yes" last-modified="2013-05-13" type="org.bluetooth.characteristic.ln_feature"
+    uuid="2A6A"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        <Summary>The LN Feature characteristic is used to report a list of features supported by the
+            device.
+        </Summary>
+    </InformativeText>
+    <Value>
+        <Field name="LN Feature">
+            <Requirement>Mandatory</Requirement>
+            <Format>32bit</Format>
+            <BitField>
+                <Bit name="Instantaneous Speed Supported" index="0" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Total Distance Supported" index="1" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Location Supported" index="2" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Elevation Supported" index="3" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Heading Supported" index="4" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Rolling Time Supported" index="5" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="UTC Time Supported" index="6" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Remaining Distance Supported" index="7" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Remaining Vertical Distance Supported" index="8" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Estimated Time of Arrival Supported" index="9" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Number of Beacons in Solution Supported" index="10" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Number of Beacons in View Supported" index="11" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Time to First Fix Supported" index="12" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Estimated Horizontal Position Error Supported" index="13" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Estimated Vertical Position Error Supported" index="14" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Horizontal Dilution of Precision Supported" index="15" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Vertical Dilution of Precision Supported" index="16" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Location and Speed Characteristic Content Masking Supported" index="17"
+                    size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Fix Rate Setting Supported" index="18" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Elevation Setting Supported" index="19" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Position Status Supported" index="20" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <ReservedForFutureUse index="21" size="11" />
+            </BitField>
+        </Field>
+    </Value>
+    <Note>
+        The fields in the above table, reading from top to bottom, are shown in the order of LSO to
+        MSO, where LSO = Least Significant Octet and MSO = Most Significant Octet.
+        The Least Significant Octet represents the eight bits numbered 0 to 7.
+    </Note>
+</Characteristic>

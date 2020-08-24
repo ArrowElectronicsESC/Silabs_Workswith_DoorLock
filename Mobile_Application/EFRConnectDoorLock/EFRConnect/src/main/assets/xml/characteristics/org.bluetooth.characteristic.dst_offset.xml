@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!-- Copyright 2011 Bluetooth SIG, Inc. All rights reserved. -->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DST Offset"
+    type="org.bluetooth.characteristic.dst_offset" uuid="2A0D"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText></InformativeText>
+    <Value>
+        <Field name="DST Offset">
+            <Requirement>Mandatory</Requirement>
+            <Format>uint8</Format>
+            <Minimum>0</Minimum>
+            <Maximum>8</Maximum>
+            <Enumerations>
+                <Enumeration key="0" value="Standard Time" />
+                <Enumeration key="2" value="Half An Hour Daylight Time (+0.5h)" />
+                <Enumeration key="4" value="Daylight Time (+1h)" />
+                <Enumeration key="8" value="Double Daylight Time (+2h)" />
+                <Reserved end="1" start="1" />
+                <Reserved end="3" start="3" />
+                <Reserved end="7" start="5" />
+                <Reserved end="254" start="9" />
+            </Enumerations>
+            <AdditionalValues>
+                <Enumeration key="255" value="DST is not known" />
+            </AdditionalValues>
+        </Field>
+    </Value>
+</Characteristic>

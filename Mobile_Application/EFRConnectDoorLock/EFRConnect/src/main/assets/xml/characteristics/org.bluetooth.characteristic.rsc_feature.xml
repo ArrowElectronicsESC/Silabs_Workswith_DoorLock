@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!--Copyright 2011 Bluetooth SIG, Inc. All rights reserved.-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="RSC Feature"
+    approved="Yes" last-modified="2012-03-22" type="org.bluetooth.characteristic.rsc_feature"
+    uuid="2A54"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        <Summary>
+            The RSC (Running Speed and Cadence) Feature characteristic is used to describe the
+            supported features of the Server.
+        </Summary>
+    </InformativeText>
+    <Value>
+        <Field name="RSC Feature">
+            <Requirement>Mandatory</Requirement>
+            <Format>16bit</Format>
+            <BitField>
+                <Bit name="Instantaneous Stride Length Measurement Supported" index="0" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Total Distance Measurement Supported" index="1" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Walking or Running Status Supported" index="2" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Calibration Procedure Supported" index="3" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Multiple Sensor Locations Supported" index="4" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <ReservedForFutureUse index="5" size="11" />
+            </BitField>
+        </Field>
+    </Value>
+</Characteristic>

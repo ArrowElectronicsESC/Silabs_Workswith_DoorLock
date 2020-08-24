@@ -1,0 +1,222 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DoorLockActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/silabs_red"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/silabs_red"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="@dimen/door_lock_padding">
+
+            <TextView
+                android:id="@+id/connected_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/connected_to"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/connected_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/finding_device_default_device_name"
+
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gallery_light"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/door_lock_padding"
+        android:paddingTop="@dimen/door_lock_padding"
+        android:paddingEnd="@dimen/door_lock_padding"
+        android:showDividers="end">
+
+        <TextView
+            android:id="@+id/txt_last_synced"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingStart="@dimen/door_lock_padding_10_dp"
+            android:paddingEnd="@dimen/door_lock_padding_10_dp"
+            android:textColor="@color/silabs_track_gray" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/silabs_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/door_lock_padding_extra">
+
+                <TextView
+                    android:id="@+id/txt_device_state"
+                    style="@style/DoorLockTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="@dimen/door_lock_padding_extra"
+                    android:text="@string/device_status" />
+
+                <TextView
+                    android:id="@+id/txt_device_status_value"
+                    style="@style/DoorLockTextValueStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:hint="@string/loading_ellipsis" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/door_lock_padding_extra">
+
+                <TextView
+                    android:id="@+id/txt_device_name"
+                    style="@style/DoorLockTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="@dimen/door_lock_padding_extra"
+                    android:text="@string/device_name_label" />
+
+                <TextView
+                    android:id="@+id/txt_device_name_value"
+                    style="@style/DoorLockTextValueStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/loading_ellipsis" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="@dimen/door_lock_padding_extra">
+
+                <TextView
+                    android:id="@+id/txt_door_status"
+                    style="@style/DoorLockTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="@dimen/door_lock_padding_extra"
+                    android:text="@string/door_status" />
+
+                <TextView
+                    android:id="@+id/door_status_value"
+                    style="@style/DoorLockTextValueStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/loading_ellipsis" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/silabs_divider" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/door_lock_padding_extra">
+
+            <com.siliconlabs.eic.doorlock.models.DoorLockSwipeButton
+                android:id="@+id/btn_lock_unlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inner_text="@string/swipe_to_unlock_str"
+                app:inner_text_size="@dimen/door_lock_label_value_size" />
+        </FrameLayout>
+
+
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="1dp"-->
+        <!--            android:layout_marginTop="@dimen/about_dialog_title_padding_left"-->
+        <!--            android:background="@color/silabs_divider" />-->
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content">-->
+        <!--            <Button-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="READ"-->
+        <!--                android:id="@+id/btn_read"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:layout_alignParentRight="true"/>-->
+        <!--            <Button-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:text="WRITE"-->
+        <!--                android:id="@+id/btn_write"-->
+        <!--                android:layout_alignParentRight="true"/>-->
+        <!--            <Button-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:text="LIGHT"-->
+        <!--                android:id="@+id/btn_light"-->
+        <!--                android:layout_alignParentRight="true"/>-->
+        <!--        </LinearLayout>-->
+
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="1dp"-->
+        <!--            android:layout_marginTop="@dimen/about_dialog_title_padding_left"-->
+        <!--            android:background="@color/silabs_divider" />-->
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/silabs_divider" />
+
+</LinearLayout>

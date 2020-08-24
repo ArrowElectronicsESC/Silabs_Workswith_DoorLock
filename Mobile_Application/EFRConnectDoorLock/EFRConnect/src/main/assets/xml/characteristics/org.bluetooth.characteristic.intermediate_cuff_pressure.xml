@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!-- Copyright 2011 Bluetooth SIG, Inc. All rights reserved. -->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    name="Intermediate Cuff Pressure" type="org.bluetooth.characteristic.intermediate_cuff_pressure"
+    uuid="2A36"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>This characteristic has the same format as the Blood Pressure Measurement
+        characteristic. However, due to a different context, the Blood Pressure Measurement Compound
+        Value field becomes the Intermediate Cuff Pressure Compound Value field, the Systolic
+        sub-field becomes the Current Cuff Pressure sub-field and the Diastolic and MAP fields are
+        unused.
+    </InformativeText>
+    <Value>
+        <Field name="Intermediate Cuff Pressure">
+            <Requirement>Mandatory</Requirement>
+            <Reference>
+                org.bluetooth.characteristic.blood_pressure_measurement
+            </Reference>
+        </Field>
+    </Value>
+</Characteristic>

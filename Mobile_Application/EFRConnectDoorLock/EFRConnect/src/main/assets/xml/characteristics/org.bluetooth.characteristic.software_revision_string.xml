@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!-- Copyright 2011 Bluetooth SIG, Inc. All rights reserved. -->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    name="Software Revision String" approved="Yes" last-modified="2011-05-24"
+    type="org.bluetooth.characteristic.software_revision_string" uuid="2A28"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        <Abstract>
+            The value of this characteristic is a UTF-8 string representing the software revision
+            for the software within the device.
+        </Abstract>
+    </InformativeText>
+    <Value>
+        <Field name="Software Revision">
+            <Requirement>Mandatory</Requirement>
+            <Format>utf8s</Format>
+        </Field>
+    </Value>
+</Characteristic>

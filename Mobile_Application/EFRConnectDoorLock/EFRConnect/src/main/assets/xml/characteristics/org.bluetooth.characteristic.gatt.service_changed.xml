@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!-- Copyright 2011 Bluetooth SIG, Inc. All rights reserved. -->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Service Changed"
+    last-modified="2013-05-29" type="org.bluetooth.characteristic.gatt.service_changed" uuid="2A05"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        <Abstract><!--The Information included in this page is informative. The normative descriptions are contained in the applicable specification.-->
+        </Abstract>
+        <InformativeDisclaimer />
+    </InformativeText>
+    <Value>
+        <Field name="Start of Affected Attribute Handle Range">
+            <Requirement>Mandatory</Requirement>
+            <Format>uint16</Format>
+            <Minimum>1</Minimum>
+            <Maximum>65535</Maximum>
+        </Field>
+        <Field name="End of Affected Attribute Handle Range">
+            <Requirement>Mandatory</Requirement>
+            <Format>uint16</Format>
+            <Minimum>1</Minimum>
+            <Maximum>65535</Maximum>
+        </Field>
+    </Value>
+</Characteristic>

@@ -1,0 +1,40 @@
+<resources>
+    <!-- DOOR LOCK -->
+    <string name="title_home">Door Lock</string>
+    <string name="title_door_lock">Door Lock</string>
+    <string name="device_status">Device Status</string>
+    <string name="door_status">Door Status</string>
+    <string name="app_version">version</string>
+
+    <string name="number_zero">0</string>
+    <string name="number_one">1</string>
+    <string name="number_two">2</string>
+    <string name="number_three">3</string>
+    <string name="number_four">4</string>
+    <string name="number_five">5</string>
+    <string name="number_six">6</string>
+    <string name="number_seven">7</string>
+    <string name="number_eight">8</string>
+    <string name="number_nine">9</string>
+    <string name="passkey_character"> * </string>
+    <string name="enter_authentication_key">Enter Authentication Key</string>
+    <string name="swipe_to_unlock_str">Swipe To Unlock</string>
+    <string name="exit">Exit</string>
+    <string name="refresh">Refresh</string>
+
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
+    <string name="last_synced_str">Last Synced</string>
+    <string name="action_history">Action History</string>
+
+    <string name="desc_back_button">back Button</string>
+    <string name="desc_silabs">desc_silabs</string>
+    <string name="desc_user_popup">User popup</string>
+    <string name="str_ok">OK</string>
+
+    <string name="CHANNEL_ID">DoorLock</string>
+    <string name="channel_name">DoorLock Notifications</string>
+    <string name="channel_description">It will popup a notification when a door lock state is changed from external interface</string>
+    <string name="str_can_not_go_back">You can not go back</string>
+    <string name="str_user_enrolled">New User Enrolled</string>
+</resources>

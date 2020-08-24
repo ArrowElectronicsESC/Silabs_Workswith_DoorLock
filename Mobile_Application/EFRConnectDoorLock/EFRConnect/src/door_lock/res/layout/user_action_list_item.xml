@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_bg"
+    android:minHeight="@dimen/door_lock_list_item_min_height"
+    android:padding="@dimen/door_lock_padding_10_dp"
+    android:textColor="@color/silabs_inactive" />

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/popup_bg"
+    android:minWidth="@dimen/door_lock_popup_min_width"
+    android:minHeight="@dimen/door_lock_popup_min_height"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/door_lock_padding_extra"
+        android:background="@drawable/popup_icon_bg"
+        android:contentDescription="@string/desc_user_popup"
+        android:padding="@dimen/door_lock_padding_extra"
+        app:srcCompat="@drawable/unlocked_36_px" />
+
+    <TextView
+        android:id="@+id/txtDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="@dimen/door_lock_padding_extra"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_button_selector"
+        android:text="@string/str_ok"
+        android:textColor="@color/silabs_white"
+        android:textSize="18sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:exitFadeDuration="@android:integer/config_shortAnimTime">
+
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="4dp" android:color="@color/silabs_blue" />
+            <gradient android:angle="270" android:endColor="@color/silabs_white" android:startColor="@color/silabs_white" />
+        </shape>
+    </item>
+
+</selector>

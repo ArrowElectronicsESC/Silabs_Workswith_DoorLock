@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!-- Copyright 2011 Bluetooth SIG, Inc. All rights reserved. -->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    name="Hardware Revision String" approved="Yes" last-modified="2011-05-24"
+    type="org.bluetooth.characteristic.hardware_revision_string" uuid="2A27"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        <Summary>
+            The value of this characteristic is a UTF-8 string representing the hardware revision
+            for the hardware within the device.
+        </Summary>
+    </InformativeText>
+    <Value>
+        <Field name="Hardware Revision">
+            <Requirement>Mandatory</Requirement>
+            <Format>utf8s</Format>
+        </Field>
+    </Value>
+</Characteristic>

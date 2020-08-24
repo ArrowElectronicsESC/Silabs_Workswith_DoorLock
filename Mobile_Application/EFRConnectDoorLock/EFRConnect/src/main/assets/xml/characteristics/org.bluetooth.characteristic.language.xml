@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!--Copyright 2014 Bluetooth SIG, Inc. All rights reserved.-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Language" approved="Yes"
+    last-modified="2014-06-10" type="org.bluetooth.characteristic.language" uuid="2AA2"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <Value>
+        <Field name="Language">
+            <InformativeText>The Language definition is based on ISO639-1.</InformativeText>
+            <Requirement>Mandatory</Requirement>
+            <Format>utf8s</Format>
+            <Unit>org.bluetooth.unit.unitless</Unit>
+        </Field>
+    </Value>
+</Characteristic>

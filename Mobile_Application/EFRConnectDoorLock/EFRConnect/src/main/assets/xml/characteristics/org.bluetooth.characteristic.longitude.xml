@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!--Copyright 2015 Bluetooth SIG, Inc. All rights reserved.-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Longitude"
+    approved="Yes" last-modified="2015-05-19" type="org.bluetooth.characteristic.longitude"
+    uuid="2AAF"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        <Abstract>
+            The Longitude characteristic describes the WGS84 East coordinate of the device.
+        </Abstract>
+    </InformativeText>
+    <Value>
+        <Field name="Longitude">
+            <Requirement>Mandatory</Requirement>
+            <Format>sint32</Format>
+        </Field>
+    </Value>
+</Characteristic>

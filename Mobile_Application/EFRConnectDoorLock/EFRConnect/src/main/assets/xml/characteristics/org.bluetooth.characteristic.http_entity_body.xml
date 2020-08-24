@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!--
+Copyright 2015 Bluetooth SIG, Inc. All rights reserved.
+-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="HTTP Entity Body"
+    approved="Yes" last-modified="2015-05-18" type="org.bluetooth.characteristic.http_entity_body"
+    uuid="2AB9"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        <Abstract>
+            The HTTP Entity Body Characteristic contains the contents of the message body after any
+            Transfer Encoding has been applied.
+        </Abstract>
+    </InformativeText>
+    <Value>
+        <Field name="HTTP Entity Body">
+            <InformativeText>The HTTP entity body used in the HTTP request.</InformativeText>
+            <Requirement>Mandatory</Requirement>
+            <Format>utf8s</Format>
+        </Field>
+    </Value>
+</Characteristic>

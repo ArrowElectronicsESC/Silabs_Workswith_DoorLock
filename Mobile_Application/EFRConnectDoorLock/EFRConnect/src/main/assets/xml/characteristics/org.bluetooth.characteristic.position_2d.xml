@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!--
+ Copyright 2011 Bluetooth SIG, Inc. All rights reserved.
+-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Position 2D"
+    type="org.bluetooth.characteristic.position_2d" uuid="2A2F"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText></InformativeText>
+    <Value>
+        <Field name="Latitude">
+            <Requirement>Mandatory</Requirement>
+            <Reference>org.bluetooth.characteristic.latitude</Reference>
+        </Field>
+        <Field name="Longitude">
+            <Requirement>Mandatory</Requirement>
+            <Reference>org.bluetooth.characteristic.longitude</Reference>
+        </Field>
+    </Value>
+</Characteristic>

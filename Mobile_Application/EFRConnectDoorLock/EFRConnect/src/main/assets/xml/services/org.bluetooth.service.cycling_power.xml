@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!--<?xml-stylesheet type="text/xsl" href="ServiceDisplay.xslt"?>-->
+<!-- Copyright 2011 Bluetooth SIG, Inc. All rights reserved. -->
+<Service xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Cycling Power"
+    last-modified="2013-05-13" type="org.bluetooth.service.cycling_power" uuid="1818"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/service.xsd">
+    <InformativeText>
+        <Abstract>This service exposes power- and force-related data and optionally speed- and
+            cadence-related data from a Cycling Power sensor intended for sports and fitness
+            applications.
+        </Abstract>
+        <Summary>The Cycling Power (CP) Service exposes power- and force-related data and optionally
+            speed- and cadence-related data from a Cycling Power sensor (Server) intended for sports
+            and fitness applications.
+        </Summary>
+    </InformativeText>
+    <Dependencies>
+        <Dependency>This service has no dependencies on other GATT-based services.</Dependency>
+    </Dependencies>
+    <GATTRequirements>
+        <Requirement subProcedure="Write Characteristic Value">C.1</Requirement>
+        <Requirement subProcedure="Notifications">Mandatory</Requirement>
+        <Requirement subProcedure="Indications">C.1</Requirement>
+        <Requirement subProcedure="Read Characteristic Descriptors">Mandatory</Requirement>
+        <Requirement subProcedure="Write Characteristic Descriptors">Mandatory</Requirement>
+        <!--<b>C1:Mandatory if the Cycling Power Control Point characteristic is supported, otherwise excluded for this service</b>-->
+    </GATTRequirements>
+    <Note>C1: Mandatory if the Cycling Power Control Point characteristic is supported, otherwise
+        excluded for this service.
+    </Note>
+    <Transports>
+        <Classic>true</Classic>
+        <LowEnergy>true</LowEnergy>
+        <HighSpeed>true</HighSpeed>
+    </Transports>
+    <ErrorCodes>
+        <ErrorCode name="Inappopropriate Connection Parameters" code="0x80">
+            The notifications of the Cycling Power Vector characteristic cannot be sent due to
+            inappropriate connection parameters.
+        </ErrorCode>
+    </ErrorCodes>
+    <Characteristics>
+        <Characteristic name="Cycling Power Measurement"
+            type="org.bluetooth.characteristic.cycling_power_measurement">
+            <Requirement>Mandatory</Requirement>
+            <Properties>
+                <Read>Excluded</Read>
+                <Write>Excluded</Write>
+                <WriteWithoutResponse>Excluded</WriteWithoutResponse>
+                <SignedWrite>Excluded</SignedWrite>
+                <ReliableWrite>Excluded</ReliableWrite>
+                <Notify>Mandatory</Notify>
+                <Indicate>Excluded</Indicate>
+                <WritableAuxiliaries>Excluded</WritableAuxiliaries>
+                <Broadcast>Optional</Broadcast>
+            </Properties>
+            <Descriptors>
+                <Descriptor name="Client Characteristic Configuration"
+                    type="org.bluetooth.descriptor.gatt.client_characteristic_configuration">
+                    <Requirement>Mandatory</Requirement>
+                    <Properties>
+                        <Read>Mandatory</Read>
+                        <Write>Mandatory</Write>
+                    </Properties>
+                </Descriptor>
+                <Descriptor name="Server Characteristic Configuration"
+                    type="org.bluetooth.descriptor.gatt.server_characteristic_configuration">
+                    <Requirement>if_broadcast_supported</Requirement>
+                    <Properties>
+                        <Read>Mandatory</Read>
+                        <Write>Mandatory</Write>
+                    </Properties>
+                </Descriptor>
+            </Descriptors>
+        </Characteristic>
+        <Characteristic name="Cycling Power Feature"
+            type="org.bluetooth.characteristic.cycling_power_feature">
+            <Requirement>Mandatory</Requirement>
+            <Properties>
+                <Read>Mandatory</Read>
+                <Write>Excluded</Write>
+                <WriteWithoutResponse>Excluded</WriteWithoutResponse>
+                <SignedWrite>Excluded</SignedWrite>
+                <ReliableWrite>Excluded</ReliableWrite>
+                <Notify>Excluded</Notify>
+                <Indicate>Excluded</Indicate>
+                <WritableAuxiliaries>Excluded</WritableAuxiliaries>
+                <Broadcast>Excluded</Broadcast>
+            </Properties>
+        </Characteristic>
+        <Characteristic name="Sensor Location" type="org.bluetooth.characteristic.sensor_location">
+            <Requirement>Mandatory</Requirement>
+            <Properties>
+                <Read>Mandatory</Read>
+                <Write>Excluded</Write>
+                <WriteWithoutResponse>Excluded</WriteWithoutResponse>
+                <SignedWrite>Excluded</SignedWrite>
+                <ReliableWrite>Excluded</ReliableWrite>
+                <Notify>Excluded</Notify>
+                <Indicate>Excluded</Indicate>
+                <WritableAuxiliaries>Excluded</WritableAuxiliaries>
+                <Broadcast>Excluded</Broadcast>
+            </Properties>
+        </Characteristic>
+        <Characteristic name="Cycling Power Vector"
+            type="org.bluetooth.characteristic.cycling_power_vector">
+            <Requirement>Optional</Requirement>
+            <Properties>
+                <Read>Excluded</Read>
+                <Write>Excluded</Write>
+                <WriteWithoutResponse>Excluded</WriteWithoutResponse>
+                <SignedWrite>Excluded</SignedWrite>
+                <ReliableWrite>Excluded</ReliableWrite>
+                <Notify>Mandatory</Notify>
+                <Indicate>Excluded</Indicate>
+                <WritableAuxiliaries>Excluded</WritableAuxiliaries>
+                <Broadcast>Excluded</Broadcast>
+            </Properties>
+            <Descriptors>
+                <Descriptor name="Client Characteristic Configuration"
+                    type="org.bluetooth.descriptor.gatt.client_characteristic_configuration">
+                    <Requirement>Mandatory</Requirement>
+                    <Properties>
+                        <Read>Mandatory</Read>
+                        <Write>Mandatory</Write>
+                    </Properties>
+                </Descriptor>
+            </Descriptors>
+        </Characteristic>
+        <Characteristic name="Cycling Power Control Point"
+            type="org.bluetooth.characteristic.cycling_power_control_point">
+            <Requirement>Optional</Requirement>
+            <Properties>
+                <Read>Excluded</Read>
+                <Write>Mandatory</Write>
+                <WriteWithoutResponse>Excluded</WriteWithoutResponse>
+                <SignedWrite>Excluded</SignedWrite>
+                <ReliableWrite>Excluded</ReliableWrite>
+                <Notify>Excluded</Notify>
+                <Indicate>Mandatory</Indicate>
+                <WritableAuxiliaries>Excluded</WritableAuxiliaries>
+                <Broadcast>Excluded</Broadcast>
+            </Properties>
+            <Descriptors>
+                <Descriptor name="Client Characteristic Configuration"
+                    type="org.bluetooth.descriptor.gatt.client_characteristic_configuration">
+                    <Requirement>Mandatory</Requirement>
+                    <Properties>
+                        <Read>Mandatory</Read>
+                        <Write>Mandatory</Write>
+                    </Properties>
+                </Descriptor>
+            </Descriptors>
+        </Characteristic>
+    </Characteristics>
+</Service>

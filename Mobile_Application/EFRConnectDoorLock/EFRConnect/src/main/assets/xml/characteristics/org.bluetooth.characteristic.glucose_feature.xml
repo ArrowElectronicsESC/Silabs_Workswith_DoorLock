@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!-- Created with Liquid XML Studio Designer Edition 9.1.10.3537 (http://www.liquid-technologies.com) -->
+<!--Copyright 2011 Bluetooth SIG, Inc. All rights reserved.-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Glucose Feature"
+    approved="Yes" last-modified="2011-11-25" type="org.bluetooth.characteristic.glucose_feature"
+    uuid="2A51"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        <Summary>
+            The Glucose Feature characteristic is used to describe the supported features of the
+            Server. When read, the Glucose Feature characteristic returns a value that is used by a
+            Client to determine the supported features of the Server.
+        </Summary>
+    </InformativeText>
+    <Value>
+        <Field name="Glucose Feature">
+            <Requirement>Mandatory</Requirement>
+            <Format>16bit</Format>
+            <BitField>
+                <Bit name="Low Battery Detection During Measurement Supported" index="0" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Sensor Malfunction Detection Supported" index="1" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Sensor Sample Size Supported" index="2" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Sensor Strip Insertion Error Detection Supported" index="3" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Sensor Strip Type Error Detection Supported" index="4" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Sensor Result High-Low Detection Supported" index="5" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Sensor Temperature High-Low Detection Supported" index="6" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Sensor Read Interrupt Detection Supported" index="7" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="General Device Fault Supported" index="8" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Time Fault Supported" index="9" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Multiple Bond Supported" index="10" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <ReservedForFutureUse index="11" size="5" />
+            </BitField>
+        </Field>
+    </Value>
+</Characteristic>

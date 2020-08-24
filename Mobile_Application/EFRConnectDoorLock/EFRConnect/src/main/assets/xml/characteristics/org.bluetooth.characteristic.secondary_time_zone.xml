@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!--
+ Copyright 2011 Bluetooth SIG, Inc. All rights reserved.
+-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Secondary Time Zone"
+    type="org.bluetooth.characteristic.secondary_time_zone" uuid="2A10"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText></InformativeText>
+    <Value>
+        <Field name="Information">
+            <Requirement>Mandatory</Requirement>
+            <Format>8bit</Format>
+            <BitField>
+                <Bit index="0" size="7">
+                    <Enumerations>
+                        <Enumeration key="0" value="Signification Unknown" />
+                        <Enumeration key="1" value="Manually set Time Zone" />
+                        <Enumeration key="2" value="Time Zone at place of departure" />
+                        <Enumeration key="3" value="Time Zone at destination" />
+                        <Enumeration key="4" value="Time Zone at home" />
+                        <ReservedForFutureUse end="127" start="5" />
+                    </Enumerations>
+                </Bit>
+                <Bit index="7" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="Information relative to UTC" />
+                        <Enumeration key="1" value="Information relative to local time" />
+                    </Enumerations>
+                </Bit>
+            </BitField>
+        </Field>
+        <Field name="Local Time Information">
+            <Requirement>Mandatory</Requirement>
+            <Reference>
+                org.bluetooth.characteristic.local_time_information
+            </Reference>
+        </Field>
+    </Value>
+</Characteristic>

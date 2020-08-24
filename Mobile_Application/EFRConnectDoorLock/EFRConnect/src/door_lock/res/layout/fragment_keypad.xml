@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/silabs_transparent_grey"
+    tools:context=".fragment.FragmentKeypad">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/silabs_transparent_dark"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/enter_authentication_key"
+            android:textColor="@color/silabs_white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/silabs_transparent_dark"
+            android:orientation="horizontal"
+            android:padding="@dimen/list_item_extra_vertical_padding">
+
+            <TextView
+                android:id="@+id/passkey_indicator_level1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/list_item_extra_vertical_padding"
+                android:text="@string/passkey_character"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/silabs_white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/passkey_indicator_level2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/list_item_extra_vertical_padding"
+                android:text="@string/passkey_character"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/silabs_white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/passkey_indicator_level3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/list_item_extra_vertical_padding"
+                android:text="@string/passkey_character"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/silabs_white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/passkey_indicator_level4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/list_item_extra_vertical_padding"
+                android:text="@string/passkey_character"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/silabs_white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <TableLayout
+            android:id="@+id/keyboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/list_item_extra_vertical_padding"
+            android:showDividers="middle|beginning|end|none">
+
+            <TableRow android:padding="5dp">
+
+                <Button
+                    android:id="@+id/btn_key_1"
+                    style="@style/keyboard_number_button"
+                    android:layout_margin="5dp"
+                    android:text="@string/number_one" />
+
+                <Button
+                    android:id="@+id/btn_key_2"
+                    style="@style/keyboard_number_button"
+                    android:layout_margin="5dp"
+                    android:text="@string/number_two" />
+
+                <Button
+                    android:id="@+id/btn_key_3"
+                    style="@style/keyboard_number_button"
+                    android:layout_margin="5dp"
+                    android:text="@string/number_three" />
+            </TableRow>
+
+            <TableRow android:padding="5dp">
+
+                <Button
+                    android:id="@+id/btn_key_4"
+                    style="@style/keyboard_number_button"
+                    android:layout_margin="5dp"
+                    android:text="@string/number_four" />
+
+                <Button
+                    android:id="@+id/btn_key_5"
+                    style="@style/keyboard_number_button"
+                    android:layout_margin="5dp"
+                    android:text="@string/number_five" />
+
+                <Button
+                    android:id="@+id/btn_key_6"
+                    style="@style/keyboard_number_button"
+                    android:layout_margin="5dp"
+                    android:text="@string/number_six" />
+            </TableRow>
+
+            <TableRow android:padding="5dp">
+
+                <Button
+                    android:id="@+id/btn_key_7"
+                    style="@style/keyboard_number_button"
+                    android:layout_margin="5dp"
+                    android:text="@string/number_seven" />
+
+                <Button
+                    android:id="@+id/btn_key_8"
+                    style="@style/keyboard_number_button"
+                    android:layout_margin="5dp"
+                    android:text="@string/number_eight" />
+
+                <Button
+                    android:id="@+id/btn_key_9"
+                    style="@style/keyboard_number_button"
+                    android:layout_margin="5dp"
+                    android:text="@string/number_nine" />
+            </TableRow>
+
+            <TableRow android:padding="5dp">
+
+                <Button
+                    android:id="@+id/btn_key_clear"
+
+                    style="@style/keyboard_button"
+                    android:layout_margin="5dp"
+                    android:tag="@string/Clear"
+                    android:text="@string/Clear"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Button
+                    android:id="@+id/btn_key_0"
+                    style="@style/keyboard_number_button"
+                    android:layout_margin="5dp"
+                    android:text="@string/number_zero" />
+
+                <Button
+                    android:id="@+id/btn_key_backspace"
+                    style="@style/keyboard_button"
+                    android:layout_margin="5dp"
+                    android:foreground="@android:drawable/ic_input_delete"
+                    android:foregroundGravity="center"
+                    android:tag="backspace"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+        </TableLayout>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="25dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/loading_spinner_ring"
+        android:progressTint="@color/silabs_blue"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/go_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:contentDescription="@string/desc_back_button"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:src="@drawable/ic_chevron_left_white_48dp"
+        app:tint="@color/silabs_white" />
+
+
+</FrameLayout>

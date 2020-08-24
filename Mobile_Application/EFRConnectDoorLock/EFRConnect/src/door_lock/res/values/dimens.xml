@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_min_height">56dp</dimen>
+    <dimen name="swipe_button_height">45dp</dimen>
+    <dimen name="door_lock_label_text_size">16sp</dimen>
+    <dimen name="door_lock_label_value_size">18sp</dimen>
+    <dimen name="door_lock_padding">16dp</dimen>
+    <dimen name="door_lock_margin">16dp</dimen>
+    <dimen name="door_lock_padding_extra">18dp</dimen>
+    <dimen name="door_lock_padding_10_dp">10dp</dimen>
+    <dimen name="door_lock_list_item_bg_radius">50dp</dimen>
+    <dimen name="door_lock_list_item_min_height">45dp</dimen>
+    <dimen name="door_lock_popup_min_height">125dp</dimen>
+    <dimen name="door_lock_popup_min_width">320dp</dimen>
+
+
+</resources>

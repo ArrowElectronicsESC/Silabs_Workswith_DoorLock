@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!--
+Copyright 2014 Bluetooth SIG, Inc. All rights reserved.
+-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Object Properties"
+    approved="Yes" last-modified="2015-11-23" type="org.bluetooth.characteristic.object_properties"
+    uuid="2AC4"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        The Object Properties characteristic is defined in the Object Transfer Service Section 3.2.8
+    </InformativeText>
+</Characteristic>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!--
+Copyright 2017 Bluetooth SIG, Inc. All rights reserved.
+-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Training Status"
+    approved="Yes" last-modified="2017-02-14" type="org.bluetooth.characteristic.training_status"
+    uuid="2AD3"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        <Summary>
+            The Training Status characteristic is defined in the Fitness Machine Service
+            Specification.
+        </Summary>
+    </InformativeText>
+</Characteristic>

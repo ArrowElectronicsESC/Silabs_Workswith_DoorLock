@@ -1,0 +1,154 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/silabs_background"
+        android:orientation="vertical"
+        tools:context=".activity.DoorLockActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/silabs_red">
+
+            <ImageView
+                android:id="@+id/go_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:contentDescription="@string/desc_back_button"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:src="@drawable/ic_chevron_left_white_48dp" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            android:minHeight="@dimen/toolbar_min_height"
+            app:title="@string/title_door_lock"
+            app:titleMarginBottom="0dp"
+            app:titleMarginTop="0dp"
+            app:titleTextAppearance="@style/TextAppearance.ToolbarTitle">
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/fragment_door_lock"
+                android:name="com.siliconlabs.eic.doorlock.fragment.FragmentDoorLock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" />
+
+            <RelativeLayout
+                android:id="@+id/app_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/txtAppVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/silabs_inactive" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/app_version"
+                android:layout_below="@id/fragment_door_lock"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/door_lock_padding_10_dp"
+                    android:text="@string/action_history"
+                    android:textColor="@color/silabs_inactive" />
+
+                <FrameLayout
+                    android:id="@+id/frame_user_action_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ListView
+                        android:id="@+id/list_actions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dividerHeight="5dp"
+                        android:padding="@dimen/door_lock_padding_10_dp"
+                        android:stackFromBottom="true"
+                        android:transcriptMode="alwaysScroll" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/splash"
+        layout="@layout/splash"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/frame_layout_keypad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/refreshing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/silabs_transparent_dark"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/door_lock_margin"
+            android:background="@drawable/refresh_view_bg">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/desc_silabs"
+                app:srcCompat="@drawable/silicon_labs_logo" />
+
+            <ProgressBar
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/refresh_ring" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

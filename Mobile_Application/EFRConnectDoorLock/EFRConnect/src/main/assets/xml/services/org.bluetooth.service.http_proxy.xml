@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright 2015 Bluetooth SIG, Inc. All rights reserved.
+-->
+<Service xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="HTTP Proxy" approved="Yes"
+    last-modified="2015-05-18" type="org.bluetooth.service.http_proxy" uuid="1823"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/service.xsd">
+    <InformativeText>
+        <Abstract>
+            This service allows a Client device, typically a sensor, to communicate with a Web
+            Server through a gateway device. The gateway device implements the HTTP Proxy Service
+            and therefore provides the services available through the Internet to the Client sensor
+            device.
+        </Abstract>
+        <Summary>
+            The HTTP Proxy Service (HPS) allows a device to expose HTTP Web Services to a client.
+            This enables an HPS client device to program a set of characteristics that configures a
+            Hyper Text Transfer Protocol (HTTP) request, initiate this, request, and then read the
+            response.
+        </Summary>
+    </InformativeText>
+    <Dependencies>
+        <Dependency>
+            This service is not dependent upon any other services.
+        </Dependency>
+    </Dependencies>
+    <GATTRequirements>
+        <Requirement subProcedure="Read Long Characteristic Values">Mandatory</Requirement>
+        <Requirement subProcedure="Write Charactristic Values">Mandatory</Requirement>
+        <Requirement subProcedure="Write Long Characteristic Values">Mandatory</Requirement>
+        <Requirement subProcedure="Notifications">Mandatory</Requirement>
+        <Requirement subProcedure="Read Characteristic Descriptors">Mandatory</Requirement>
+        <Requirement subProcedure="Write Characteristic Descriptors">Mandatory</Requirement>
+    </GATTRequirements>
+    <Transports>
+        <Classic>true</Classic>
+        <LowEnergy>true</LowEnergy>
+        <HighSpeed>true</HighSpeed>
+    </Transports>
+    <ErrorCodes>
+        <ErrorCode name="Invalid Request"
+            Description="A HTTP Control Point request cannot be serviced because content of the URI, the HTTP Headers, or the HTTP Entity Body Characteristic is not correctly, or if the request was made without configuring HTTP Status Code characteristics for notification"
+            code="0x81" />
+        <ErrorCode name="Network Not Available" Description="Network Connection not available"
+            code="0x82" />
+    </ErrorCodes>
+    <Characteristics>
+        <Characteristic name="URI" type="org.bluetooth.characteristic.uri">
+            <Requirement>Mandatory</Requirement>
+            <Properties>
+                <Read>Excluded</Read>
+                <Write>Mandatory</Write>
+                <WriteWithoutResponse>Excluded</WriteWithoutResponse>
+                <SignedWrite>Excluded</SignedWrite>
+                <ReliableWrite>Excluded</ReliableWrite>
+                <Notify>Excluded</Notify>
+                <Indicate>Excluded</Indicate>
+                <WritableAuxiliaries>Excluded</WritableAuxiliaries>
+                <Broadcast>Excluded</Broadcast>
+            </Properties>
+        </Characteristic>
+        <Characteristic name="HTTP Headers" type="org.bluetooth.characteristic.http_headers">
+            <Requirement>Mandatory</Requirement>
+            <Properties>
+                <Read>Mandatory</Read>
+                <Write>Mandatory</Write>
+                <WriteWithoutResponse>Excluded</WriteWithoutResponse>
+                <SignedWrite>Excluded</SignedWrite>
+                <ReliableWrite>Excluded</ReliableWrite>
+                <Notify>Excluded</Notify>
+                <Indicate>Excluded</Indicate>
+                <WritableAuxiliaries>Excluded</WritableAuxiliaries>
+                <Broadcast>Excluded</Broadcast>
+            </Properties>
+        </Characteristic>
+        <Characteristic name="HTTP Entity Body"
+            type="org.bluetooth.characteristic.http_entity_body">
+            <Requirement>Mandatory</Requirement>
+            <Properties>
+                <Read>Mandatory</Read>
+                <Write>Mandatory</Write>
+                <WriteWithoutResponse>Excluded</WriteWithoutResponse>
+                <SignedWrite>Excluded</SignedWrite>
+                <ReliableWrite>Excluded</ReliableWrite>
+                <Notify>Excluded</Notify>
+                <Indicate>Excluded</Indicate>
+                <WritableAuxiliaries>Excluded</WritableAuxiliaries>
+                <Broadcast>Excluded</Broadcast>
+            </Properties>
+        </Characteristic>
+        <Characteristic name="HTTP Control Point"
+            type="org.bluetooth.characteristic.http_control_point">
+            <Requirement>Mandatory</Requirement>
+            <Properties>
+                <Read>Excluded</Read>
+                <Write>Mandatory</Write>
+                <WriteWithoutResponse>Excluded</WriteWithoutResponse>
+                <SignedWrite>Excluded</SignedWrite>
+                <ReliableWrite>Excluded</ReliableWrite>
+                <Notify>Excluded</Notify>
+                <Indicate>Excluded</Indicate>
+                <WritableAuxiliaries>Excluded</WritableAuxiliaries>
+                <Broadcast>Excluded</Broadcast>
+            </Properties>
+        </Characteristic>
+        <Characteristic name="HTTP Status Code"
+            type="org.bluetooth.characteristic.http_status_code">
+            <Requirement>Mandatory</Requirement>
+            <Properties>
+                <Read>Excluded</Read>
+                <Write>Excluded</Write>
+                <WriteWithoutResponse>Excluded</WriteWithoutResponse>
+                <SignedWrite>Excluded</SignedWrite>
+                <ReliableWrite>Excluded</ReliableWrite>
+                <Notify>Mandatory</Notify>
+                <Indicate>Excluded</Indicate>
+                <WritableAuxiliaries>Excluded</WritableAuxiliaries>
+                <Broadcast>Excluded</Broadcast>
+            </Properties>
+        </Characteristic>
+        <Characteristic name="HTTPS Security" type="org.bluetooth.characteristic.https_security">
+            <Requirement>Mandatory</Requirement>
+            <Properties>
+                <Read>Mandatory</Read>
+                <Write>Excluded</Write>
+                <WriteWithoutResponse>Excluded</WriteWithoutResponse>
+                <SignedWrite>Excluded</SignedWrite>
+                <ReliableWrite>Excluded</ReliableWrite>
+                <Notify>Excluded</Notify>
+                <Indicate>Excluded</Indicate>
+                <WritableAuxiliaries>Excluded</WritableAuxiliaries>
+                <Broadcast>Excluded</Broadcast>
+            </Properties>
+        </Characteristic>
+    </Characteristics>
+</Service>

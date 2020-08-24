@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!-- <?xml-stylesheet type="text/xsl" href="FieldBasedDisplay.xslt"?> -->
+<!-- Created with Liquid XML Studio Designer Edition 9.1.10.3537 (http://www.liquid-technologies.com) -->
+<!--Copyright 2011 Bluetooth SIG, Inc. All rights reserved.-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    name="Cycling Power Control Point" approved="Yes" last-modified="2013-05-13"
+    type="org.bluetooth.characteristic.cycling_power_control_point" uuid="2A66"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        <Summary>The Cycling Power Control Point characteristic is used to request a specific
+            function to be executed on the receiving device.
+        </Summary>
+    </InformativeText>
+    <Value>
+        <Field name="Op Codes">
+            <Requirement>Mandatory</Requirement>
+            <Format>uint8</Format>
+            <Enumerations>
+                <Enumeration
+                    description="Initiate the procedure to set a cumulative value. The new value is sent as parameter following op code (parameter defined per service). The response to this control point is Op Code 0x20 followed by the appropriate Response Value."
+                    key="1" value="Set Cumulative Value" />
+                <Enumeration
+                    description="Update to the location of the Sensor with the value sent as parameter to this op code. The response to this control point is Op Code 0x20 followed by the appropriate Response Value."
+                    key="2" value="Update Sensor Location" />
+                <Enumeration
+                    description="Request a list of supported locations where the Sensor can be attached. The response to this control point is Op Code 0x20 followed by the appropriate Response Value, including a list of supported Sensor locations in the Response Parameter."
+                    key="3" value="Request Supported Sensor Locations" />
+                <Enumeration
+                    description="Initiate the procedure to set the crank length value to Sensor. The new value is sent as a parameter with preceding Op Code 0x04 operand. The response to this control point is Op Code 0x20 followed by the appropriate Response Value."
+                    key="4" value="Set Crank Length" />
+                <Enumeration
+                    description="Request the current crank length value set in the Sensor. The response to this control point is Op Code 0x20 followed by the appropriate Response Value, including the value of the Crank Length in the Response Parameter."
+                    key="5" value="Request Crank Length" />
+                <Enumeration
+                    description="Initiate the procedure to set the chain length value to Sensor. The new value is sent as a parameter with preceding Op Code 0x06 operand. The response to this control point is Op Code 0x20 followed by the appropriate Response Value."
+                    key="6" value="Set Chain Length" />
+                <Enumeration
+                    description="Request the current chain length value set in the Sensor. The response to this control point is Op Code 0x20 followed by the appropriate Response Value, including the value of the chain length in the Response Parameter."
+                    key="7" value="Request Chain Length" />
+                <Enumeration
+                    description="Initiate the procedure to set the chain weight value to Sensor. The new value is sent as a parameter with preceding Op Code 0x08 operand. The response to this control point is Op Code 0x20 followed by the appropriate Response Value."
+                    key="8" value="Set Chain Weight" />
+                <Enumeration
+                    description="Request the current chain weight value set in the Sensor. The response to this control point is Op Code 0x20 followed by the appropriate Response Value, including the value of the chain weight in the Response Parameter."
+                    key="9" value="Request Chain Weight" />
+                <Enumeration
+                    description="Initiate the procedure to set the span length value to Sensor. The new value is sent as a parameter with preceding Op Code 0x0A operand. The response to this control point is Op Code 0x20 followed by the appropriate Response Value."
+                    key="10" value="Set Span Length" />
+                <Enumeration
+                    description="Request the current span length value set in the Sensor. The response to this control point is Op Code 0x20 followed by the appropriate Response Value, including the value of the span length in the Response Parameter."
+                    key="11" value="Request Span Length" />
+                <Enumeration
+                    description="Starts the offset compensation process of the Sensor. The response to this control point is Op Code 0x20 followed by the appropriate Response Value, including the value of the raw force or a raw torque in the Response Parameter (defined per Service)."
+                    key="12" value="Start Offset Compensation" />
+                <Enumeration
+                    description="Initiate the procedure to set the content of Cycling Power Measurement Characteristic. The response to this control point is Op Code 0x20 followed by the appropriate Response Value."
+                    key="13" value="Mask Cycling Power Measurement Characteristic Content" />
+                <Enumeration
+                    description="Request the sampling rate value set in the Sensor. The response to this control point is Op Code 0x20 followed by the appropriate Response Value, including the value of the sampling rate in the Response Parameter."
+                    key="14" value="Request Sampling Rate" />
+                <Enumeration
+                    description="Request the Factory calibration date set in the Sensor. The response to this control point is Op Code 0x20 followed by the appropriate Response Value, including the value of the Factory calibration date in the Response Parameter."
+                    key="15" value="Request Factory Calibration Date" />
+                <Enumeration
+                    description="The Response Code is followed by the Request Op Code, the Response Value and optionally, the Response Parameter."
+                    key="32" value="Response Code" />
+                <ReservedForFutureUse end="0" start="0" />
+                <ReservedForFutureUse end="31" start="16" />
+                <ReservedForFutureUse end="255" start="33" />
+            </Enumerations>
+        </Field>
+        <Field name="Parameter Value">
+            <!--<InformativeText>Parameter Value for "Set Cumulative Value" Op Code</InformativeText>-->
+            <Requirement>Optional</Requirement>
+            <Format>variable</Format>
+            <Description>Defined per Service specification.</Description>
+        </Field>
+        <Field name="Request Op Code">
+            <InformativeText>The Request Op Code is a sub field of the Parameter Value for "Response
+                Code" Op Code.
+                <br>
+                    C1: This Field is Mandatory for "Response Code" Op Code, otherwise this field is
+                    Excluded.
+                </br>
+            </InformativeText>
+            <Requirement>C1</Requirement>
+            <Format>uint8</Format>
+            <Description>Refer to the Op Code table above for additional information on the possible
+                values for this field.
+            </Description>
+        </Field>
+        <Field name="Response Value">
+            <InformativeText>The Response Value is a sub field of the Parameter Value for "Response
+                Code" Op Code
+                <br>
+                    C1: This Field is Mandatory for "Response Code" Op Code, otherwise this field is
+                    Excluded.
+                </br>
+            </InformativeText>
+            <Requirement>C1</Requirement>
+            <Format>uint8</Format>
+            <Enumerations>
+                <Enumeration description="Response for successful operation. " key="1"
+                    value="Success" />
+                <Enumeration description="Response if unsupported Op Code is received." key="2"
+                    value="Op Code not Supported" />
+                <Enumeration
+                    description="Response if Parameter received does not meet the requirements of the service or is outside of the supported range of the Sensor."
+                    key="3" value="Invalid Parameter" />
+                <Enumeration description="Response if the requested procedure failed." key="4"
+                    value="Operation Failed" />
+                <ReservedForFutureUse end="0" start="0" />
+                <ReservedForFutureUse end="255" start="5" />
+            </Enumerations>
+        </Field>
+        <Field name="Response Parameter">
+            <InformativeText>The Response Parameter is a sub field of the Parameter Value for
+                "Response Code" Op Code.
+                <br>
+                    C2:This Field is Optional for "Response Code" Op Code, otherwise this field is
+                    Excluded.
+                </br>
+            </InformativeText>
+            <Requirement>C2</Requirement>
+            <Format>variable</Format>
+            <Description>Note: The Response Parameter Value of the response to the Control Point is
+                a variable length field to allow a list of different values defined by the Service
+                Specification
+            </Description>
+        </Field>
+    </Value>
+    <Note>
+        The fields in the above table, reading from top to bottom, are shown in the order of LSO to
+        MSO, where LSO = Least Significant Octet and MSO = Most Significant Octet.
+        The Least Significant Octet represents the eight bits numbered 0 to 7.
+    </Note>
+</Characteristic>

@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!--Copyright 2014 Bluetooth SIG, Inc. All rights reserved.-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    name="Body Composition Measurement" approved="Yes" last-modified="2014-10-17"
+    type="org.bluetooth.characteristic.body_composition_measurement" uuid="2A9C"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <Value>
+        <Field name="Flags">
+            <Requirement>Mandatory</Requirement>
+            <Format>16bit</Format>
+            <BitField>
+                <Bit name="Measurement Units" index="0" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" requires="C1"
+                            value="SI (Weight and Mass in units of kilogram (kg) and Height in units of meter)" />
+                        <Enumeration key="1" requires="C2"
+                            value="Imperial (Weight and Mass in units of pound (lb) and Height in units of inch (in))" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Time Stamp Present" index="1" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" requires="C3" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="User ID present" index="2" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" requires="C4" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Basal Metabolism present" index="3" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" requires="C5" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Muscle Percentage present" index="4" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" requires="C6" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Muscle Mass present" index="5" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" requires="C7" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Fat Free Mass present" index="6" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" requires="C8" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Soft Lean Mass present" index="7" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" requires="C9" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Body Water Mass present" index="8" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" requires="C10" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Impedance present" index="9" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" requires="C11" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Weight present" index="10" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" requires="C12" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Height present" index="11" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" requires="C13" value="True" />
+                    </Enumerations>
+                </Bit>
+                <Bit name="Multiple Packet Measurement" index="12" size="1">
+                    <Enumerations>
+                        <Enumeration key="0" value="False" />
+                        <Enumeration key="1" value="True" />
+                    </Enumerations>
+                </Bit>
+                <ReservedForFutureUse index="13" size="3" />
+            </BitField>
+        </Field>
+        <Field name="Body Fat Percentage">
+            <InformativeText>
+                Unit is in percent with a resolution of 0.1
+            </InformativeText>
+            <Requirement>Mandatory</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.percentage</Unit>
+            <DecimalExponent>-1</DecimalExponent>
+        </Field>
+        <Field name="Time Stamp">
+            <InformativeText>
+                Smallest unit in seconds
+            </InformativeText>
+            <Requirement>C3</Requirement>
+            <Reference>org.bluetooth.characteristic.date_time</Reference>
+        </Field>
+        <Field name="User ID">
+            <InformativeText>
+                Unit is unitless with a resoluton of 1
+            </InformativeText>
+            <Requirement>C4</Requirement>
+            <Format>uint8</Format>
+            <Unit>org.bluetooth.unit.unitless</Unit>
+            <DecimalExponent>0</DecimalExponent>
+            <Enumerations>
+                <InformativeText>The special value of 0xFF (255 Decimal) for User ID represents
+                    “unknown user”.
+                </InformativeText>
+                <Enumeration key="255" value="unknown user"></Enumeration>
+            </Enumerations>
+        </Field>
+        <Field name="Basal Metabolism">
+            <InformativeText>
+                Unit is in kilo Joules with a resolution of 1
+            </InformativeText>
+            <Requirement>C5</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.energy.joule</Unit>
+            <DecimalExponent>3</DecimalExponent>
+        </Field>
+        <Field name="Muscle Percentage">
+            <InformativeText>
+                Unit is in percentage with a resolution of 0.1
+            </InformativeText>
+            <Requirement>C6</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.percentage</Unit>
+            <DecimalExponent>-1</DecimalExponent>
+        </Field>
+        <Field name="Muscle Mass - Kilograms">
+            <InformativeText>
+                Unit is in kilograms with resolution 0.005. Note: Determined when bit 0 of the Flags
+                field is set to 0.
+            </InformativeText>
+            <Requirement>C1</Requirement>
+            <Requirement>C7</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.mass.kilogram</Unit>
+            <DecimalExponent>-3</DecimalExponent>
+            <Multiplier>5</Multiplier>
+        </Field>
+        <Field name="Muscle Mass - Pounds">
+            <InformativeText>
+                Unit is in pounds with resolution 0.01. Note: Determined when bit 0 of the Flags
+                field is set to 1.
+            </InformativeText>
+            <Requirement>C2</Requirement>
+            <Requirement>C7</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.mass.pound</Unit>
+            <DecimalExponent>-2</DecimalExponent>
+        </Field>
+        <Field name="Fat Free Mass - Kilograms">
+            <InformativeText>
+                Unit is in kilograms with resolution 0.005. Note: Determined when bit 0 of the Flags
+                field is set to 0.
+            </InformativeText>
+            <Requirement>C1</Requirement>
+            <Requirement>C8</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.mass.kilogram</Unit>
+            <DecimalExponent>-3</DecimalExponent>
+            <Multiplier>5</Multiplier>
+        </Field>
+        <Field name="Fat Free Mass - Pounds">
+            <InformativeText>
+                Unit is in pounds with a resolution of 0.01. Note: Determined when bit 0 of the
+                Flags field is set to 1.
+            </InformativeText>
+            <Requirement>C2</Requirement>
+            <Requirement>C8</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.mass.pound</Unit>
+            <DecimalExponent>-2</DecimalExponent>
+        </Field>
+        <Field name="Soft Lean Mass - Kilograms">
+            <InformativeText>
+                Unit is in kilograms with a resolution of 0.005. Note: Determined when bit 0 of the
+                Flags field is set to 0.
+            </InformativeText>
+            <Requirement>C1</Requirement>
+            <Requirement>C9</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.mass.kilogram</Unit>
+            <DecimalExponent>-3</DecimalExponent>
+            <Multiplier>5</Multiplier>
+        </Field>
+        <Field name="Soft Lean Mass - Pounds">
+            <InformativeText>
+                Unit is in pounds with a resolution of 0.01. Note: Determined when bit 0 of the
+                Flags field is set to 1.
+            </InformativeText>
+            <Requirement>C2</Requirement>
+            <Requirement>C9</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.mass.kilogram</Unit>
+            <DecimalExponent>-2</DecimalExponent>
+        </Field>
+        <Field name="Body Water Mass - Kilograms">
+            <InformativeText>
+                Unit is in kilograms with a resolution of 0.005. Note: Determined when bit 0 of the
+                Flags field is set to 0.
+            </InformativeText>
+            <Requirement>C1</Requirement>
+            <Requirement>C10</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.mass.kilogram</Unit>
+            <DecimalExponent>-3</DecimalExponent>
+            <Multiplier>5</Multiplier>
+        </Field>
+        <Field name="Body Water Mass - Pounds">
+            <InformativeText>
+                Unit is in pounds with a resolution of 0.01. Note: Determined when bit 0 of the
+                Flags field is set to 1.
+            </InformativeText>
+            <Requirement>C2</Requirement>
+            <Requirement>C10</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.mass.pound</Unit>
+            <DecimalExponent>-2</DecimalExponent>
+        </Field>
+        <Field name="Impedance">
+            <InformativeText>
+                Unit is in Ohms with a resolution of 0.1
+            </InformativeText>
+            <Requirement>C11</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.electric_resistance.ohm</Unit>
+            <DecimalExponent>-1</DecimalExponent>
+        </Field>
+        <Field name="Weight - Kilograms">
+            <InformativeText>
+                Unit is in kilograms with a resolution of 0.005. Note: Determined when bit 0 of the
+                Flags field is set to 0.
+            </InformativeText>
+            <Requirement>C1</Requirement>
+            <Requirement>C12</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.mass.kilogram</Unit>
+            <DecimalExponent>-3</DecimalExponent>
+            <Multiplier>5</Multiplier>
+        </Field>
+        <Field name="Weight - Pounds">
+            <InformativeText>
+                Unit is in pounds with a resolution of 0.01. Note: Determined when bit 0 of the
+                Flags field is set to 1.
+            </InformativeText>
+            <Requirement>C2</Requirement>
+            <Requirement>C12</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.mass.pound</Unit>
+            <DecimalExponent>-2</DecimalExponent>
+        </Field>
+        <Field name="Height - Meters">
+            <InformativeText>
+                Unit is in meters with a resolution of 0.001. Note: Determined when bit 0 of the
+                Flags field is set to 0.
+            </InformativeText>
+            <Requirement>C1</Requirement>
+            <Requirement>C13</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.length.meter</Unit>
+            <DecimalExponent>-3</DecimalExponent>
+        </Field>
+        <Field name="Height - Inches">
+            <InformativeText>
+                Unit is in meters with a resolution of 0.1. Note: Determined when bit 0 of the Flags
+                field is set to 1.
+            </InformativeText>
+            <Requirement>C2</Requirement>
+            <Requirement>C13</Requirement>
+            <Format>uint16</Format>
+            <Unit>org.bluetooth.unit.length.inch</Unit>
+            <DecimalExponent>-1</DecimalExponent>
+        </Field>
+    </Value>
+    <Note>
+        <p>The fields in the above table are in the order of LSO to MSO. Where LSO = Least
+            Significant Octet and MSO = Most Significant Octet.
+        </p>
+    </Note>
+</Characteristic>

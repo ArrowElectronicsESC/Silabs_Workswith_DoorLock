@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!--
+Copyright 2015 Bluetooth SIG, Inc. All rights reserved.
+-->
+<Characteristic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="HTTP Control Point"
+    approved="Yes" last-modified="2015-05-18" type="org.bluetooth.characteristic.http_control_point"
+    uuid="2ABA"
+    xsi:noNamespaceSchemaLocation="http://schemas.bluetooth.org/Documents/characteristic.xsd">
+    <InformativeText>
+        <Abstract>
+            The HTTP Control Point is used to initiate a request to send an HTTP request message
+            from the device contgaining the HTTP Proxy Service, acting as an HTTP Client, and an
+            HTTP Server.
+        </Abstract>
+    </InformativeText>
+    <Value>
+        <Field name="Op Code">
+            <Requirement>Mandatory</Requirement>
+            <Format>uint8</Format>
+            <Enumerations>
+                <Enumeration description="Initiates an HTTP GET Request." key="1" requires="N/A"
+                    value="HTTP GET Request" />
+                <Enumeration description="Initiates an HTTP HEAD Request." key="2" requires="N/A"
+                    value="HTTP HEAD Request" />
+                <Enumeration description="Initiates an HTTP POST Request." key="3" requires="N/A"
+                    value="HTTP POST Request" />
+                <Enumeration description="Initiates an HTTP PUT Request." key="4" requires="N/A"
+                    value="HTTP PUT Request" />
+                <Enumeration description="Initiates an HTTP DELETE Request." key="5" requires="N/A"
+                    value="HTTP DELETE Request" />
+                <Enumeration description="Initiates an HTTPS GET Reques.t" key="6" requires="N/A"
+                    value="HTTPS GET Request" />
+                <Enumeration description="Initiates an HTTPS HEAD Request." key="7" requires="N/A"
+                    value="HTTPS HEAD Request" />
+                <Enumeration description="Initiates an HTTPS POST Request." key="8" requires="N/A"
+                    value="HTTPS POST Request" />
+                <Enumeration description="Initiates an HTTPS PUT Request." key="9" requires="N/A"
+                    value="HTTPS PUT Request" />
+                <Enumeration description="Initiates an HTTPS DELETE Request." key="10"
+                    requires="N/A" value="HTTPS DELETE Request" />
+                <Enumeration
+                    description="Terminates any executing HTTP Request from the HPS Client."
+                    key="11" requires="N/A" value="HTTP Request Cancel" />
+                <ReservedForFutureUse end="0" start="0" />
+                <ReservedForFutureUse end="255" start="12" />
+            </Enumerations>
+        </Field>
+    </Value>
+</Characteristic>
