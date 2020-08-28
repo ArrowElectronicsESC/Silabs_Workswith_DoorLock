@@ -11,8 +11,7 @@
 #include CONFIGURATION_HEADER
 #include "hal/hal.h"
 #include EMBER_AF_API_EEPROM
-#include "door-lock-srs/Global.h"
-#include "door-lock-srs/Gvar.h"
+
 
 
 /** @brief Add To Current App Tasks
@@ -1838,8 +1837,6 @@ bool emberAfPluginInterpanPreMessageReceivedCallback(const EmberAfInterpanHeader
  */
 void emberAfPluginMicriumRtosAppTask1InitCallback(void)
 {
-	InitVariables() ;
-	InitPeripherals() ;
 }
 
 /** @brief
@@ -1851,7 +1848,6 @@ void emberAfPluginMicriumRtosAppTask1InitCallback(void)
 void emberAfPluginMicriumRtosAppTask1MainLoopCallback(void *p_arg)
 {
   while (true) {
-	  ModeProcess() ;
     // Main loop
   }
 }

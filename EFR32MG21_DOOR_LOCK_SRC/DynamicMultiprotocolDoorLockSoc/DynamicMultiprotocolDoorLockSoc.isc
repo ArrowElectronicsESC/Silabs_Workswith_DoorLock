@@ -168,7 +168,7 @@ lcdPermitJoinEventControl,lcdPermitJoinEventHandler
 lastArchitectureId=efr32~family[M]~series[2]~device_configuration[1]~performance[A]~radio[020]~flash[1024K]~temp[I]~package[M]~pins[32]~!module+BRD4180A+iar
 featureLevel=1
 active=true
-lastHwConfFileUsed=PATH(ISC_RELATIVE):brd4180a_efr32mg21a020f1024im32.hwconf
+lastHwConfFileUsed=PATH(GEN_RELATIVE):brd4180a_efr32mg21a020f1024im32.hwconf
 }
 {setupId:information
 \{key:description
@@ -943,3 +943,4 @@ AppPluginOption:EMBER_AF_PLUGIN_DMP_TUNING_NO_PROFILE,false
 AppPluginOption:EMBER_AF_PLUGIN_DMP_TUNING_PROFILE_BALANCED,true
 AppPluginOption(efr32~family[M]~series[2]~device_configuration[1]~performance[A]~radio[020]~flash[1024K]~temp[I]~package[M]~pins[32]~!module+BRD4180A+iar):EMBER_AF_PLUGIN_MICRIUM_RTOS_APP_TASK1,true
 AppPluginOption(efr32~family[M]~series[2]~device_configuration[1]~performance[A]~radio[020]~flash[1024K]~temp[I]~package[M]~pins[32]~!module+BRD4180A+iar):EMBER_AF_PLUGIN_ZCL_FRAMEWORK_CORE_CLI_ENABLED,false
+AppPluginOption(efr32~family[M]~series[2]~device_configuration[1]~performance[A]~radio[020]~flash[1024K]~temp[I]~package[M]~pins[32]~!module+BRD4180A+iar):EMBER_AF_PLUGIN_MICRIUM_RTOS_APP_TASK1_STACK_SIZE,200
