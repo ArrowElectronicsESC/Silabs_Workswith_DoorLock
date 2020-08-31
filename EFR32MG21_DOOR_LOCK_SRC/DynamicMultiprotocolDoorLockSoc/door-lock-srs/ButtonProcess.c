@@ -28,6 +28,8 @@ void CheckButton(void)
 		ButtonProcess(ButtonData.ucmButtonPressedType , ButtonData.usmFinalProcessingButton);			//To process on the pressed button...
 		
 		Button.usmButtonPressTimeout		= BUTTON_PRESS_TIMEOUT_SEC ;   //Reload the button press Timeout
+
+		RefreshIdleStateTimer() ;
 	}
 }
 
@@ -75,12 +77,12 @@ void StepButton(uint8_t ucvButtonPressedType)
 {
     if(ucvButtonPressedType NEQ LONG_PRESS)
     {
-    	ToggleStepOrStartEnrollment(FALSE);
+    	ToggleStepOrZigbeeFunctionality(FALSE);
     }
 
 	if((Button.ucmOneTimeButtonLongPress EQ TRUE) AND (Button.ucmButtonPressedTime >= ONE_TIME_LONG_PRESS_TIME_Sec))
 	{
-		ToggleStepOrStartEnrollment(TRUE);
+		ToggleStepOrZigbeeFunctionality(TRUE);
 	}
 
 

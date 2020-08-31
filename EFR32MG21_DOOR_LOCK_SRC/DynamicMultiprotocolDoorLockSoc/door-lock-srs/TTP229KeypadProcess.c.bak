@@ -217,7 +217,7 @@ void KeypadAuthentication(void)
 
 		case AUTHENTICATE_MATCH_PASSWORD :
 
-			for(ucmUser = 0 ; ucmUser < Users.ucmCurrentEnrollmentNumber ; ucmUser++ )
+			for(ucmUser = 0 ; ucmUser < Users.usmCurrentEnrollmentNumber ; ucmUser++ )
 			{
 				if(Users.usmKeypadPassword[ucmUser] EQ KeypadAuthenticate.usmPassword)
 				{
@@ -228,7 +228,7 @@ void KeypadAuthentication(void)
 					break ;
 				}
 
-				if(ucmUser EQ (Users.ucmCurrentEnrollmentNumber - 1))
+				if(ucmUser EQ (Users.usmCurrentEnrollmentNumber - 1))
 				{
 					KeypadAuthenticate.usmPassword = CLEAR ;
 					KeypadAuthenticate.ucmAuthenticationState = AUTHENTICATE_ENTER_PASSWORD ;

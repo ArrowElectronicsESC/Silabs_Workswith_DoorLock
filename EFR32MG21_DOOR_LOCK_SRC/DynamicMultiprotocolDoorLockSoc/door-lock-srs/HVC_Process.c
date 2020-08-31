@@ -39,6 +39,7 @@ void FacePrintEnrollment(void)
 				{
 					if(ucmOutStatus EQ ZERO)
 					{
+						RefreshIdleStateTimer() ;
 						SetGreenLedForGreenSuccess() ;
 						FaceEnroll.ucmEnrollmentState = ENROLL_RE_ENTER_FACE ;
 						FaceEnroll.usmDelayBetweenFaceEnrollments = SCAN_TIME_BETWEEN_TWO_FACES ;
@@ -65,6 +66,7 @@ void FacePrintEnrollment(void)
 				{
 					if(ucmOutStatus EQ ZERO)
 					{
+						RefreshIdleStateTimer() ;
 						HVC_WriteAlbum(TIMEOUT_WRITE_ALBUM, &ucmOutStatus) ;
 						SetGreenLedForGreenSuccess() ;
 						FaceEnroll.ucmEnrollmentState = ENROLL_SUCCESS_FACE ;

@@ -30,6 +30,9 @@ void InitPort(void)
 
 	  // Configure Solenoid pin as digital output
 	  GPIO_PinModeSet(SOLENOID_PIN_PORT, SOLENOID_PIN, gpioModePushPull, 0);
+
+	  // Configure Solenoid pin as digital output
+	  GPIO_PinModeSet(MODULE_DISABLE_PIN_PORT, MODULE_DISABLE_PIN, gpioModePushPull, 0);
 	
 }
 

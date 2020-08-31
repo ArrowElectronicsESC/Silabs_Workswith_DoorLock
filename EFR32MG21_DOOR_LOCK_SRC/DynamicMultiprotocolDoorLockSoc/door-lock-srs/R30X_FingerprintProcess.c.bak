@@ -51,7 +51,7 @@ void FingerPrintEnrollment(void)
 					{
 						if(GenerateTemplate() EQ FPS_RESP_OK)
 						{
-							if(SaveTemplate(1, (Users.ucmCurrentEnrollmentNumber + 1)) EQ FPS_RESP_OK)
+							if(SaveTemplate(1, (Users.usmCurrentEnrollmentNumber + 1)) EQ FPS_RESP_OK)
 							{
 								SetGreenLedForGreenSuccess() ;
 								FingerEnroll.ucmEnrollmentState = ENROLL_SUCCESS_FINGER ;
@@ -157,7 +157,7 @@ void FingerAuthentication(void)
 	{
 		case AUTHENTICATE_ENTER_FINGER :
 
-				ucmResponse = CaptureAndRangeSearch(3000, 1, (Users.ucmCurrentEnrollmentNumber + 1)) ;
+				ucmResponse = CaptureAndRangeSearch(3000, 1, (Users.usmCurrentEnrollmentNumber + 1)) ;
 
 				if(ucmResponse EQ FPS_RESP_OK)
 				{

@@ -27,42 +27,48 @@ void ModeProcess(void)
 				switch(Mode.ucmModeOfAuthentication) //To process according to the Pressed key 
 				{
 					case KEYPAD :
-
-						KeypadAuthentication() ;
-
-						if(GetAuthenticationState() EQ AUTHENTICATE_SUCCESS_PASSWORD)
+						if(SolenoidLock.ucmLockStatus EQ LOCKED)
 						{
-							UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll , GetAuthenticationUserNo());
-							notifyDoorStatus(&doorStateInfoData);
+							KeypadAuthentication() ;
+
+							if(GetAuthenticationState() EQ AUTHENTICATE_SUCCESS_PASSWORD)
+							{
+								UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll , GetAuthenticationUserNo());
+								notifyDoorStatus(&doorStateInfoData);
 
 
-							SetupAuthentication() ;
+								SetupAuthentication() ;
+							}
 						}
 
 						break ;
 							
 					case FINGERPRINT	:
 						
-						FingerAuthentication() ;
-
-						if(GetFingerAuthenticationState() EQ AUTHENTICATE_SUCCESS_FINGER)
+						if(SolenoidLock.ucmLockStatus EQ LOCKED)
 						{
-							UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll , GetFingerAuthenticationUserNo());
-							SetupAuthentication() ;
-							notifyDoorStatus(&doorStateInfoData);
-						}
+							FingerAuthentication() ;
 
+							if(GetFingerAuthenticationState() EQ AUTHENTICATE_SUCCESS_FINGER)
+							{
+								UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll , GetFingerAuthenticationUserNo());
+								SetupAuthentication() ;
+								notifyDoorStatus(&doorStateInfoData);
+							}
+						}
 						break ;
 						
 					case FACE	:
-
-						//FaceAuthentication() ;
-						
-						if(GetFaceAuthenticationState() EQ AUTHENTICATE_SUCCESS_FACE)
+						if(SolenoidLock.ucmLockStatus EQ LOCKED)
 						{
-							UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll , GetFaceAuthenticationUserNo());
-							SetupAuthentication() ;
-							notifyDoorStatus(&doorStateInfoData);
+							FaceAuthentication() ;
+
+							if(GetFaceAuthenticationState() EQ AUTHENTICATE_SUCCESS_FACE)
+							{
+								UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll , GetFaceAuthenticationUserNo());
+								SetupAuthentication() ;
+								notifyDoorStatus(&doorStateInfoData);
+							}
 						}
 
 						break ;
@@ -79,61 +85,64 @@ void ModeProcess(void)
 			switch(Mode.ucmModeOfAuthentication) //To process according to the Pressed key 
 				{
 					case KEYPAD_FINGERPRINT :
-						
-						KeypadAuthentication() ;
-
-						if(GetAuthenticationState() EQ AUTHENTICATE_SUCCESS_PASSWORD)
+						if(SolenoidLock.ucmLockStatus EQ LOCKED)
 						{
-							FingerAuthentication() ;
+							KeypadAuthentication() ;
 
-							if(GetFingerAuthenticationState() EQ AUTHENTICATE_SUCCESS_FINGER)
+							if(GetAuthenticationState() EQ AUTHENTICATE_SUCCESS_PASSWORD)
 							{
-								if((GetFingerAuthenticationUserNo() EQ GetAuthenticationUserNo()) AND
-									(GetFingerAuthenticationUserNo() NEQ NOT_AUTHENTICATED) AND
-									(GetAuthenticationUserNo() NEQ NOT_AUTHENTICATED))
-								{
-									UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll, GetAuthenticationUserNo());
-									SetupAuthentication() ;
-									notifyDoorStatus(&doorStateInfoData);
+								FingerAuthentication() ;
 
-								}
-								else
+								if(GetFingerAuthenticationState() EQ AUTHENTICATE_SUCCESS_FINGER)
 								{
-									SetupFingerAuthentication() ;
-									SetRedLedForFail() ;
+									if((GetFingerAuthenticationUserNo() EQ GetAuthenticationUserNo()) AND
+										(GetFingerAuthenticationUserNo() NEQ NOT_AUTHENTICATED) AND
+										(GetAuthenticationUserNo() NEQ NOT_AUTHENTICATED))
+									{
+										UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll, GetAuthenticationUserNo());
+										SetupAuthentication() ;
+										notifyDoorStatus(&doorStateInfoData);
+
+									}
+									else
+									{
+										SetupFingerAuthentication() ;
+										SetRedLedForFail() ;
+									}
 								}
-							}
-						}
+							 }
+						   }
 
 						break ;
 							
 					case KEYPAD_FACE	:
-						
-						KeypadAuthentication() ;
-
-						if(GetAuthenticationState() EQ AUTHENTICATE_SUCCESS_PASSWORD)
+						if(SolenoidLock.ucmLockStatus EQ LOCKED)
 						{
-							//FaceAuthentication() ;
+							KeypadAuthentication() ;
 
-							if(GetFaceAuthenticationState() EQ AUTHENTICATE_SUCCESS_FACE)
+							if(GetAuthenticationState() EQ AUTHENTICATE_SUCCESS_PASSWORD)
 							{
-								if((GetFaceAuthenticationUserNo() EQ GetAuthenticationUserNo()) AND
-									(GetFaceAuthenticationUserNo() NEQ NOT_AUTHENTICATED) AND
-									(GetAuthenticationUserNo() NEQ NOT_AUTHENTICATED))
-								{
-									UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll, GetAuthenticationUserNo());
-									SetupAuthentication() ;
-									notifyDoorStatus(&doorStateInfoData);
+								FaceAuthentication() ;
 
-								}
-								else
+								if(GetFaceAuthenticationState() EQ AUTHENTICATE_SUCCESS_FACE)
 								{
-									SetupFaceAuthentication() ;
-									SetRedLedForFail() ;
+									if((GetFaceAuthenticationUserNo() EQ GetAuthenticationUserNo()) AND
+										(GetFaceAuthenticationUserNo() NEQ NOT_AUTHENTICATED) AND
+										(GetAuthenticationUserNo() NEQ NOT_AUTHENTICATED))
+									{
+										UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll, GetAuthenticationUserNo());
+										SetupAuthentication() ;
+										notifyDoorStatus(&doorStateInfoData);
+
+									}
+									else
+									{
+										SetupFaceAuthentication() ;
+										SetRedLedForFail() ;
+									}
 								}
 							}
 						}
-
 						break ;
 							
 					default :
@@ -153,16 +162,6 @@ void ModeProcess(void)
 					if(GetEnrollmentState() EQ ENROLL_SUCCESS_PASSWORD)
 					{
 						Mode.ucmModeOfAuthentication = FINGERPRINT ;
-
-//						Users.usmKeypadPassword[Users.usmCurrentEnrollmentNumber] = GetEnrollmentPassword() ;
-//						Users.usmCurrentEnrollmentNumber ++ ;
-//
-//						WriteFlash() ;
-//
-//						SetupAuthentication() ;
-//
-//						Mode.ucmStepOrEnroll = ONE_STEP_AUTHENTICATION ;
-//						Mode.ucmModeOfAuthentication = KEYPAD ;
 					}
 
 						break ;
@@ -174,16 +173,6 @@ void ModeProcess(void)
 						if(GetFingerEnrollmentState() EQ ENROLL_SUCCESS_FINGER)
 						{
 							Mode.ucmModeOfAuthentication = FACE ;
-
-							Users.usmKeypadPassword[Users.usmCurrentEnrollmentNumber] = GetEnrollmentPassword() ;
-							Users.usmCurrentEnrollmentNumber ++ ;
-
-							WriteFlash() ;
-
-							SetupAuthentication() ;
-
-							Mode.ucmStepOrEnroll = ONE_STEP_AUTHENTICATION ;
-							Mode.ucmModeOfAuthentication = KEYPAD ;
 						}
 
 						break ;
@@ -213,6 +202,11 @@ void ModeProcess(void)
 				}
 			
 			break ;
+
+		case IDLE_MODE :
+
+
+			break ;
 				
         default :
                //default
@@ -235,29 +229,40 @@ void ModeProcess(void)
 * Arguments    : None
 * Return Value : None
 **************************************************************************************************************************************************************/
-void ToggleStepOrStartEnrollment(uint8_t ucmLongPress)
+void ToggleStepOrZigbeeFunctionality(uint8_t ucmLongPress)
 {
-	LockDoor() ;
-	SolenoidLock.ucmLockNotify = TRUE ;
-	//notifyDoorStatus(&doorStateInfoData);
-
-	if(Mode.ucmStepOrEnroll EQ ONE_STEP_AUTHENTICATION)
+	if(Mode.ucmStepOrEnroll NEQ IDLE_MODE)
 	{
-		Mode.ucmStepOrEnroll = TWO_STEP_AUTHENTICATION ;
-		Mode.ucmModeOfAuthentication = KEYPAD_FINGERPRINT ;
-		SetupAuthentication() ;
+		LockDoor() ;
+		SolenoidLock.ucmLockNotify = TRUE ;
+		//notifyDoorStatus(&doorStateInfoData);
+
+		if(Mode.ucmStepOrEnroll EQ ONE_STEP_AUTHENTICATION)
+		{
+			Mode.ucmStepOrEnroll = TWO_STEP_AUTHENTICATION ;
+			Mode.ucmModeOfAuthentication = KEYPAD_FINGERPRINT ;
+			SetupAuthentication() ;
+		}
+		else if(Mode.ucmStepOrEnroll EQ TWO_STEP_AUTHENTICATION)
+		{
+			Mode.ucmStepOrEnroll = ONE_STEP_AUTHENTICATION ;
+			Mode.ucmModeOfAuthentication = KEYPAD ;
+			SetupAuthentication() ;
+		}
+		else if(Mode.ucmStepOrEnroll EQ ENROLLMENT)
+		{
+			ZigbeeNwFunctionality(ucmLongPress) ;
+		}
 	}
-	else if(Mode.ucmStepOrEnroll EQ TWO_STEP_AUTHENTICATION)
+	else
 	{
 		Mode.ucmStepOrEnroll = ONE_STEP_AUTHENTICATION ;
 		Mode.ucmModeOfAuthentication = KEYPAD ;
 		SetupAuthentication() ;
+		EnableModulesForIdleMode() ;
+		EnableUSART0() ;
+		EnableUSART1() ;
 	}
-	else if(Mode.ucmStepOrEnroll EQ ENROLLMENT)
-	{
-		ZigbeeNwFunctionality(ucmLongPress) ;
-	}
-	
 }
 
 
@@ -270,31 +275,33 @@ void ToggleStepOrStartEnrollment(uint8_t ucmLongPress)
 **************************************************************************************************************************************************************/
 void ToggleEnrollmentAndStep(void)
 {
-	uint8_t ucmOutStatus ;
 
-	LockDoor() ;
-	SolenoidLock.ucmLockNotify = TRUE ;
-	//notifyDoorStatus(&doorStateInfoData);
-
-	if(Mode.ucmStepOrEnroll EQ ENROLLMENT)
+	if(Mode.ucmStepOrEnroll NEQ IDLE_MODE)
 	{
-		Mode.ucmStepOrEnroll = ONE_STEP_AUTHENTICATION ;
-		Mode.ucmModeOfAuthentication = KEYPAD ;
-		SetupAuthentication() ;
+		LockDoor() ;
+		SolenoidLock.ucmLockNotify = TRUE ;
+		//notifyDoorStatus(&doorStateInfoData);
 
-		/*if(GetFaceEnrollmentState() NEQ ENROLL_SUCCESS_FACE)
+		if(Mode.ucmStepOrEnroll EQ ENROLLMENT)
 		{
-			DeleteTemplate((Users.ucmCurrentEnrollmentNumber + 1) , 1) ;
-			HVC_DeleteUser(FACE_DELETE_USER_TIMEOUT , (Users.ucmCurrentEnrollmentNumber + 1) , &ucmOutStatus) ;
-		}*/
-	}
-	else
-	{
-		Mode.ucmStepOrEnroll = ENROLLMENT ;
-		Mode.ucmModeOfAuthentication = KEYPAD ;
-		SetupKeypadEnrollment() ;
-		SetupFingerEnrollment() ;
-		SetupFaceEnrollment() ;
+			Mode.ucmStepOrEnroll = ONE_STEP_AUTHENTICATION ;
+			Mode.ucmModeOfAuthentication = KEYPAD ;
+			SetupAuthentication() ;
+
+			/*if(GetFaceEnrollmentState() NEQ ENROLL_SUCCESS_FACE)
+			{
+				DeleteTemplate((Users.ucmCurrentEnrollmentNumber + 1) , 1) ;
+				HVC_DeleteUser(FACE_DELETE_USER_TIMEOUT , (Users.ucmCurrentEnrollmentNumber + 1) , &ucmOutStatus) ;
+			}*/
+		}
+		else
+		{
+			Mode.ucmStepOrEnroll = ENROLLMENT ;
+			Mode.ucmModeOfAuthentication = KEYPAD ;
+			SetupKeypadEnrollment() ;
+			SetupFingerEnrollment() ;
+			SetupFaceEnrollment() ;
+		}
 	}
 }
 
@@ -308,32 +315,35 @@ void ToggleEnrollmentAndStep(void)
 **************************************************************************************************************************************************************/
 void IncrementMode(void)
 {
-	if(Mode.ucmStepOrEnroll EQ ENROLLMENT)
+	if(Mode.ucmStepOrEnroll NEQ IDLE_MODE)
 	{
-		return ;
-	}
-	else
-	{
-		Mode.ucmModeOfAuthentication++ ;
-		LockDoor() ;
-		SolenoidLock.ucmLockNotify = TRUE ;
-		//notifyDoorStatus(&doorStateInfoData);
-
-		SetupAuthentication() ;
-	}
-	
-	if(Mode.ucmStepOrEnroll EQ ONE_STEP_AUTHENTICATION)
-	{
-		if(Mode.ucmModeOfAuthentication >= NOOFMODESIN1STEP)
+		if(Mode.ucmStepOrEnroll EQ ENROLLMENT)
 		{
-			Mode.ucmModeOfAuthentication = 0 ;
+			return ;
 		}
-	}
-	else if(Mode.ucmStepOrEnroll EQ TWO_STEP_AUTHENTICATION)
-	{
-		if(Mode.ucmModeOfAuthentication >= NOOFMODESIN2STEP)
+		else
 		{
-			Mode.ucmModeOfAuthentication = 0 ;
+			Mode.ucmModeOfAuthentication++ ;
+			LockDoor() ;
+			SolenoidLock.ucmLockNotify = TRUE ;
+			//notifyDoorStatus(&doorStateInfoData);
+	
+			SetupAuthentication() ;
+		}
+
+		if(Mode.ucmStepOrEnroll EQ ONE_STEP_AUTHENTICATION)
+		{
+			if(Mode.ucmModeOfAuthentication >= NOOFMODESIN1STEP)
+			{
+				Mode.ucmModeOfAuthentication = 0 ;
+			}
+		}
+		else if(Mode.ucmStepOrEnroll EQ TWO_STEP_AUTHENTICATION)
+		{
+			if(Mode.ucmModeOfAuthentication >= NOOFMODESIN2STEP)
+			{
+				Mode.ucmModeOfAuthentication = 0 ;
+			}
 		}
 	}
 
@@ -438,6 +448,13 @@ void UpdateLedStatus(void)
 
 			break ;
 
+		case IDLE_MODE :
+
+			Led.ucmLed1Status = COMPLETE_OFF;
+			Led.ucmLed2Status = COMPLETE_OFF;
+
+			break ;
+
 		default :
 			   //default
 			break ;
@@ -464,7 +481,10 @@ void UpdateLedStatus(void)
 	{
 		GPIO_PinOutSet(LED1_PIN_PORT, LED1_PIN);
 	}
-
+	else if(Led.ucmLed1Status EQ COMPLETE_OFF)
+	{
+		GPIO_PinOutClear(LED1_PIN_PORT, LED1_PIN);
+	}
 
 	if(Led.ucmLed2Status EQ SLOW_BLINKING)
 	{
@@ -486,6 +506,10 @@ void UpdateLedStatus(void)
 	else if(Led.ucmLed2Status EQ COMPLETE_ON)
 	{
 		GPIO_PinOutSet(LED2_PIN_PORT, LED2_PIN);
+	}
+	else if(Led.ucmLed2Status EQ COMPLETE_OFF)
+	{
+		GPIO_PinOutClear(LED2_PIN_PORT, LED2_PIN);
 	}
 	
 	BlinkGreenLed() ;
@@ -519,7 +543,7 @@ void InitLedVariables(void)
 **************************************************************************************************************************************************************/
 void InitModeVariables(void)
 {
-	Mode.ucmStepOrEnroll 			= ENROLLMENT ;
+	Mode.ucmStepOrEnroll 			= ONE_STEP_AUTHENTICATION ;
 	Mode.ucmModeOfAuthentication	= KEYPAD ;
 }
 
@@ -705,4 +729,79 @@ void SetupAuthentication(void)
 	SetupFaceAuthentication() ;
 	SetupFingerAuthentication() ;
 	SetupKeypadAuthentication() ;
+}
+
+
+/*************************************************************************************************************************************************************
+* Author 	   : Prassanna Sakore
+* Function Name: SetControllerToIdleMode
+* Description  : This function sets mode to idle
+* Arguments    : None
+* Return Value : None
+**************************************************************************************************************************************************************/
+void SetControllerToIdleMode(void)
+{
+	Mode.ucmStepOrEnroll = IDLE_MODE ;
+}
+
+
+/*************************************************************************************************************************************************************
+* Author 	   : Prassanna Sakore
+* Function Name: UpdateIdleState
+* Description  : This function updates time to set the device in IDLE mode
+* Arguments    : None
+* Return Value : None
+**************************************************************************************************************************************************************/
+void UpdateIdleState(void)
+{
+	//Button Press Timeout to enter sleep
+	if(Idle.usmIdleIterator)
+	{
+		Idle.usmIdleIterator-- ;
+
+		if(Idle.usmIdleIterator EQ ZERO)
+		{
+			SetControllerToIdleMode() ;
+			DisableModulesForIdleMode() ;
+			DisableUSART0() ;
+			DisableUSART1() ;
+		}
+	}
+}
+
+/*************************************************************************************************************************************************************
+* Author 	   : Prassanna Sakore
+* Function Name: RefreshIdleStateTimer
+* Description  : This function refreshes IDLE state iterator
+* Arguments    : None
+* Return Value : None
+**************************************************************************************************************************************************************/
+void RefreshIdleStateTimer(void)
+{
+	Idle.usmIdleIterator = IDLE_TIMEOUT ;
+}
+
+/*************************************************************************************************************************************************************
+* Author 	   : Prassanna Sakore
+* Function Name: EnableModulesForIdleMode
+* Description  : This function enables modules when exiting Idle mode
+* Arguments    : None
+* Return Value : None
+**************************************************************************************************************************************************************/
+void EnableModulesForIdleMode(void)
+{
+	GPIO_PinOutSet(MODULE_DISABLE_PIN_PORT , MODULE_DISABLE_PIN);
+}
+
+
+/*************************************************************************************************************************************************************
+* Author 	   : Prassanna Sakore
+* Function Name: DisableModulesForIdleMode
+* Description  : This function disables modules when entering Idle mode
+* Arguments    : None
+* Return Value : None
+**************************************************************************************************************************************************************/
+void DisableModulesForIdleMode(void)
+{
+	GPIO_PinOutClear(MODULE_DISABLE_PIN_PORT , MODULE_DISABLE_PIN);
 }

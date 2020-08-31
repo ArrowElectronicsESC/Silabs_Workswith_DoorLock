@@ -52,6 +52,44 @@ void InitUSART0(void)
 
 /*************************************************************************************************************************************************************
 * Author 	   : Prassanna Sakore
+* Function Name: DisableUSART0
+* Description  : This function disables the UART 0
+* Arguments    : None
+* Return Value : None
+**************************************************************************************************************************************************************/
+void DisableUSART0(void)
+{
+	  // Disable NVIC USART 0 sources
+	  NVIC_ClearPendingIRQ(USART0_RX_IRQn) ;
+	  NVIC_DisableIRQ(USART0_RX_IRQn) ;
+	  NVIC_ClearPendingIRQ(USART0_TX_IRQn) ;
+	  NVIC_DisableIRQ(USART0_TX_IRQn) ;
+
+	  CMU_ClockEnable(cmuClock_USART0, FALSE);
+}
+
+
+/*************************************************************************************************************************************************************
+* Author 	   : Prassanna Sakore
+* Function Name: EnableUSART0
+* Description  : This function enables the UART 0
+* Arguments    : None
+* Return Value : None
+**************************************************************************************************************************************************************/
+void EnableUSART0(void)
+{
+	  // Enable NVIC USART 0 sources
+	  NVIC_ClearPendingIRQ(USART0_RX_IRQn) ;
+	  NVIC_EnableIRQ(USART0_RX_IRQn) ;
+	  NVIC_ClearPendingIRQ(USART0_TX_IRQn) ;
+	  NVIC_EnableIRQ(USART0_TX_IRQn) ;
+
+	  CMU_ClockEnable(cmuClock_USART0, TRUE);
+}
+
+
+/*************************************************************************************************************************************************************
+* Author 	   : Prassanna Sakore
 * Function Name: USART0_Change_Baudrate
 * Description  : This function changes the baudrate of USART 0
 * Arguments    : uint32_t ulmBaudrate

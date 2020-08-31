@@ -22,14 +22,14 @@ void InitUSART1(void)
 
 	  Init.baudrate = (uint32_t)9600 ;
 
-	  // Configure PA6 as an output (TX)
+	  // Configure PA5 as an output (TX)
 	  GPIO_PinModeSet(UART1_TX_PIN_PORT, UART1_TX_PIN, gpioModePushPull, 0);
 
-	  // Configure PA5 as an input (RX)
+	  // Configure PA0 as an input (RX)
 	  GPIO_PinModeSet(UART1_RX_PIN_PORT, UART1_RX_PIN, gpioModeInput, 0);
 
 
-	  // Route USART1 TX and RX to PA6 and PA5 pins, respectively
+	  // Route USART1 TX and RX to PA5 and PA0 pins, respectively
 	  GPIO->USARTROUTE[1].TXROUTE = (UART1_TX_PIN_PORT << _GPIO_USART_TXROUTE_PORT_SHIFT)
 	      | (UART1_TX_PIN << _GPIO_USART_TXROUTE_PIN_SHIFT) ;
 	  GPIO->USARTROUTE[1].RXROUTE = (UART1_RX_PIN_PORT << _GPIO_USART_RXROUTE_PORT_SHIFT)
@@ -49,6 +49,43 @@ void InitUSART1(void)
 
 }
 
+/*************************************************************************************************************************************************************
+* Author 	   : Prassanna Sakore
+* Function Name: DisableUSART1
+* Description  : This function disables the UART 1
+* Arguments    : None
+* Return Value : None
+**************************************************************************************************************************************************************/
+void DisableUSART1(void)
+{
+	  // Disable NVIC USART 1 sources
+	  NVIC_ClearPendingIRQ(USART1_RX_IRQn) ;
+	  NVIC_DisableIRQ(USART1_RX_IRQn) ;
+	  NVIC_ClearPendingIRQ(USART1_TX_IRQn) ;
+	  NVIC_DisableIRQ(USART1_TX_IRQn) ;
+
+	  CMU_ClockEnable(cmuClock_USART1, FALSE);
+
+}
+
+/*************************************************************************************************************************************************************
+* Author 	   : Prassanna Sakore
+* Function Name: EnableUSART1
+* Description  : This function enables the UART 1
+* Arguments    : None
+* Return Value : None
+**************************************************************************************************************************************************************/
+void EnableUSART1(void)
+{
+	  // Enable NVIC USART 1 sources
+	  NVIC_ClearPendingIRQ(USART1_RX_IRQn) ;
+	  NVIC_EnableIRQ(USART1_RX_IRQn) ;
+	  NVIC_ClearPendingIRQ(USART1_TX_IRQn) ;
+	  NVIC_EnableIRQ(USART1_TX_IRQn) ;
+
+	  CMU_ClockEnable(cmuClock_USART1, TRUE);
+
+}
 
 /*************************************************************************************************************************************************************
 * Author 	   : Prassanna Sakore
@@ -70,14 +107,14 @@ void USART1_Change_Baudrate(uint32_t ulmBaudrate)
 
 	  Init.baudrate = ulmBaudrate ;
 
-	  // Configure PA6 as an output (TX)
+	  // Configure PA5 as an output (TX)
 	  GPIO_PinModeSet(UART1_TX_PIN_PORT, UART1_TX_PIN, gpioModePushPull, 0);
 
-	  // Configure PA5 as an input (RX)
+	  // Configure PA0 as an input (RX)
 	  GPIO_PinModeSet(UART1_RX_PIN_PORT, UART1_RX_PIN, gpioModeInput, 0);
 
 
-	  // Route USART1 TX and RX to PA6 and PA5 pins, respectively
+	  // Route USART1 TX and RX to PA5 and PA0 pins, respectively
 	  GPIO->USARTROUTE[1].TXROUTE = (UART1_TX_PIN_PORT << _GPIO_USART_TXROUTE_PORT_SHIFT)
 		      | (UART1_TX_PIN << _GPIO_USART_TXROUTE_PIN_SHIFT) ;
 	  GPIO->USARTROUTE[1].RXROUTE = (UART1_RX_PIN_PORT << _GPIO_USART_RXROUTE_PORT_SHIFT)

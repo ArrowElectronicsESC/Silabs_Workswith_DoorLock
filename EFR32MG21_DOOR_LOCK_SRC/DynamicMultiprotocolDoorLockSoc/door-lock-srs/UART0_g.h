@@ -24,5 +24,6 @@ void USART0_Change_Baudrate(uint32_t ulmBaudrate) ;
 void USART0_Start_RX(void) ;
 uint8_t USART0_Get_Transmit_Status(void) ;
 uint8_t USART0_Get_Receive_Status(void) ;
-
+void DisableUSART0(void) ;
+void EnableUSART0(void) ;
 #endif /* UART0_G_H_ */

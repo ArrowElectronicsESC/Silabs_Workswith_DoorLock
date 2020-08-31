@@ -54,6 +54,7 @@ void InitVariables(void)
 	InitLedVariables() ;
 	InitModeVariables() ;
 	InitTTP229Variables() ;
+	RefreshIdleStateTimer() ;
 	InitR30XFingerprintVariables(FPS_DEFAULT_PASSWORD , FPS_DEFAULT_ADDRESS) ;
 }
 

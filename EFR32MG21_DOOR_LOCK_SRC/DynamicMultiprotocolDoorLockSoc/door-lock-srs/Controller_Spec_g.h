@@ -14,8 +14,8 @@
 #define	STEP_BUTTON_PIN_PORT 	(gpioPortD)
 #define STEP_BUTTON_PIN	  		(3U)
 
-#define LED1_PIN_PORT 			(gpioPortC)//(gpioPortA)
-#define LED1_PIN				(3U)//(4U)
+#define LED1_PIN_PORT 			(gpioPortC)
+#define LED1_PIN				(3U)
 
 #define LED2_PIN_PORT			(gpioPortD)
 #define LED2_PIN				(4U)
@@ -39,13 +39,16 @@
 #define UART0_RX_PIN			(1U)
 
 #define	UART1_TX_PIN_PORT		(gpioPortA)
-#define UART1_TX_PIN			(6U)
+#define UART1_TX_PIN			(5U)
 
 #define	UART1_RX_PIN_PORT		(gpioPortA)
-#define UART1_RX_PIN			(5U)
+#define UART1_RX_PIN			(0U)
 
-#define	SOLENOID_PIN_PORT		(gpioPortC)//(gpioPortC)
-#define SOLENOID_PIN			(2U)//(3U)
+#define	SOLENOID_PIN_PORT		(gpioPortC)
+#define SOLENOID_PIN			(2U)
+
+#define	MODULE_DISABLE_PIN_PORT		(gpioPortA)
+#define MODULE_DISABLE_PIN			(6U)
 
 void InitPort(void);
 void DelayMicroseconds(uint32_t ulmDelayInMicroSec) ;

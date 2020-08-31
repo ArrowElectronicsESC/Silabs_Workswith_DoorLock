@@ -110,6 +110,7 @@ void TIMER1_IRQHandler(void)
 {
 	UpdateButtonRead() ;
 	UpdateButtonCheck() ;
+	UpdateIdleState() ;
 	UpdateButtonIdle() ;
 	UpdateLedStatus() ;
 	USART0_RX_Update_Timeout() ;

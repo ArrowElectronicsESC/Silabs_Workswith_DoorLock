@@ -13,7 +13,7 @@
 #define FACE						2
 
 void ModeProcess(void) ;
-void ToggleStepOrStartEnrollment(uint8_t ucmLongPress) ;
+void ToggleStepOrZigbeeFunctionality(uint8_t ucmLongPress) ;
 void ToggleEnrollmentAndStep(void) ;
 void IncrementMode(void) ;
 void UpdateLedStatus(void) ;
@@ -25,5 +25,8 @@ void SetRedLedForFail(void) ;
 void UpadateSolenoidLockTime(void) ;
 void UnlockDoor(uint8_t ucmAuthType ,uint8_t ucmUserActionType , uint8_t ucmUserID) ;
 void LockDoor(void) ;
+void SetControllerToIdleMode(void) ;
+void UpdateIdleState(void) ;
+void RefreshIdleStateTimer(void) ;
 
 #endif /* MODE_G_H_ */

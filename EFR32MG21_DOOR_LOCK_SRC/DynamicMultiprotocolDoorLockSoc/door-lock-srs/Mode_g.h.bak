@@ -23,7 +23,7 @@ void SetGreenLedForUserAction(void) ;
 void SetGreenLedForGreenSuccess(void) ;
 void SetRedLedForFail(void) ;
 void UpadateSolenoidLockTime(void) ;
-void UnlockDoor(uint8_t ucmAuthType ,uint8_t ucmUserActionType) ;
+void UnlockDoor(uint8_t ucmAuthType ,uint8_t ucmUserActionType , uint8_t ucmUserID) ;
 void LockDoor(void) ;
 
 #endif /* MODE_G_H_ */

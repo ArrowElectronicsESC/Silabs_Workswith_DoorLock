@@ -22,14 +22,14 @@ void InitUSART1(void)
 
 	  Init.baudrate = (uint32_t)9600 ;
 
-	  // Configure PA5 as an output (TX)
+	  // Configure PA6 as an output (TX)
 	  GPIO_PinModeSet(UART1_TX_PIN_PORT, UART1_TX_PIN, gpioModePushPull, 0);
 
-	  // Configure PA6 as an input (RX)
+	  // Configure PA5 as an input (RX)
 	  GPIO_PinModeSet(UART1_RX_PIN_PORT, UART1_RX_PIN, gpioModeInput, 0);
 
 
-	  // Route USART1 TX and RX to PA5 and PA6 pins, respectively
+	  // Route USART1 TX and RX to PA6 and PA5 pins, respectively
 	  GPIO->USARTROUTE[1].TXROUTE = (UART1_TX_PIN_PORT << _GPIO_USART_TXROUTE_PORT_SHIFT)
 	      | (UART1_TX_PIN << _GPIO_USART_TXROUTE_PIN_SHIFT) ;
 	  GPIO->USARTROUTE[1].RXROUTE = (UART1_RX_PIN_PORT << _GPIO_USART_RXROUTE_PORT_SHIFT)
@@ -70,14 +70,14 @@ void USART1_Change_Baudrate(uint32_t ulmBaudrate)
 
 	  Init.baudrate = ulmBaudrate ;
 
-	  // Configure PA5 as an output (TX)
+	  // Configure PA6 as an output (TX)
 	  GPIO_PinModeSet(UART1_TX_PIN_PORT, UART1_TX_PIN, gpioModePushPull, 0);
 
-	  // Configure PA6 as an input (RX)
+	  // Configure PA5 as an input (RX)
 	  GPIO_PinModeSet(UART1_RX_PIN_PORT, UART1_RX_PIN, gpioModeInput, 0);
 
 
-	  // Route USART1 TX and RX to PA5 and PA6 pins, respectively
+	  // Route USART1 TX and RX to PA6 and PA5 pins, respectively
 	  GPIO->USARTROUTE[1].TXROUTE = (UART1_TX_PIN_PORT << _GPIO_USART_TXROUTE_PORT_SHIFT)
 		      | (UART1_TX_PIN << _GPIO_USART_TXROUTE_PIN_SHIFT) ;
 	  GPIO->USARTROUTE[1].RXROUTE = (UART1_RX_PIN_PORT << _GPIO_USART_RXROUTE_PORT_SHIFT)
@@ -137,11 +137,11 @@ void USART1_TX_IRQHandler(void)
 
 			if(Transmit_U1.usmIndex >= Transmit_U1.usmNoOfBytes)
 			{
-				USART1_Start_RX() ;
 				Transmit_U1.usmIndex = ZERO ;
 				Transmit_U1.usmNoOfBytes = ZERO ;
 				Transmit_U1.ucmStatus = COMPLETED ;
 				USART_IntDisable(USART1, USART_IEN_TXBL) ;
+				USART1_Start_RX() ;
 			}
 		}
 

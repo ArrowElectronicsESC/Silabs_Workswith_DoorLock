@@ -11,6 +11,7 @@
 #define ONE_STEP_AUTHENTICATION		0
 #define TWO_STEP_AUTHENTICATION		1
 #define ENROLLMENT					2
+#define IDLE_MODE 					3
 
 #define KEYPAD_FINGERPRINT			0
 #define KEYPAD_FACE					1
@@ -37,7 +38,9 @@
 #define LOCKED	0
 #define UNLOCKED 1
 
-#define DOOR_AUTOMATIC_LOCK_TIME 5000
+#define DOOR_AUTOMATIC_LOCK_TIME 15000
+
+#define IDLE_TIMEOUT 30000
 
 typedef struct 
 {
@@ -68,8 +71,16 @@ typedef struct
 
 TagSolenoidLock SolenoidLock ;
 
+typedef struct
+{
+	uint16_t 	usmIdleIterator 	;
+}TagIdle ;
+
+TagIdle Idle ;
+
 void BlinkGreenLed(void) ;
 void BlinkRedLed(void) ;
 void SetupAuthentication(void) ;
-
+void EnableModulesForIdleMode(void) ;
+void DisableModulesForIdleMode(void) ;
 #endif /* MODE_H_ */

@@ -28,6 +28,7 @@ void FingerPrintEnrollment(void)
 				{
 					if(GenerateCharacter(1) EQ FPS_RESP_OK)
 					{
+						RefreshIdleStateTimer() ;
 						SetGreenLedForGreenSuccess() ;
 						FingerEnroll.ucmEnrollmentState = ENROLL_RE_ENTER_FINGER ;
 						FingerEnroll.usmDelayBetweenFingerEnrollments = SCAN_TIME_BETWEEN_TWO_FINGERS ;
@@ -53,6 +54,7 @@ void FingerPrintEnrollment(void)
 						{
 							if(SaveTemplate(1, (Users.usmCurrentEnrollmentNumber + 1)) EQ FPS_RESP_OK)
 							{
+								RefreshIdleStateTimer() ;
 								SetGreenLedForGreenSuccess() ;
 								FingerEnroll.ucmEnrollmentState = ENROLL_SUCCESS_FINGER ;
 							}

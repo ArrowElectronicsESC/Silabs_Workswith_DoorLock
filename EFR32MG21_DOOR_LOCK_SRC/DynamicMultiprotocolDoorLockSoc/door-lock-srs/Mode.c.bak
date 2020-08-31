@@ -32,7 +32,7 @@ void ModeProcess(void)
 
 						if(GetAuthenticationState() EQ AUTHENTICATE_SUCCESS_PASSWORD)
 						{
-							UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll);
+							UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll , GetAuthenticationUserNo());
 							notifyDoorStatus(&doorStateInfoData);
 
 
@@ -47,7 +47,7 @@ void ModeProcess(void)
 
 						if(GetFingerAuthenticationState() EQ AUTHENTICATE_SUCCESS_FINGER)
 						{
-							UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll);
+							UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll , GetFingerAuthenticationUserNo());
 							SetupAuthentication() ;
 							notifyDoorStatus(&doorStateInfoData);
 						}
@@ -60,7 +60,7 @@ void ModeProcess(void)
 						
 						if(GetFaceAuthenticationState() EQ AUTHENTICATE_SUCCESS_FACE)
 						{
-							UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll);
+							UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll , GetFaceAuthenticationUserNo());
 							SetupAuthentication() ;
 							notifyDoorStatus(&doorStateInfoData);
 						}
@@ -92,13 +92,14 @@ void ModeProcess(void)
 									(GetFingerAuthenticationUserNo() NEQ NOT_AUTHENTICATED) AND
 									(GetAuthenticationUserNo() NEQ NOT_AUTHENTICATED))
 								{
-									UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll);;
+									UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll, GetAuthenticationUserNo());
 									SetupAuthentication() ;
 									notifyDoorStatus(&doorStateInfoData);
 
 								}
 								else
 								{
+									SetupFingerAuthentication() ;
 									SetRedLedForFail() ;
 								}
 							}
@@ -120,13 +121,14 @@ void ModeProcess(void)
 									(GetFaceAuthenticationUserNo() NEQ NOT_AUTHENTICATED) AND
 									(GetAuthenticationUserNo() NEQ NOT_AUTHENTICATED))
 								{
-									UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll);;
+									UnlockDoor(Mode.ucmModeOfAuthentication ,Mode.ucmStepOrEnroll, GetAuthenticationUserNo());
 									SetupAuthentication() ;
 									notifyDoorStatus(&doorStateInfoData);
 
 								}
 								else
 								{
+									SetupFaceAuthentication() ;
 									SetRedLedForFail() ;
 								}
 							}
@@ -152,13 +154,15 @@ void ModeProcess(void)
 					{
 						Mode.ucmModeOfAuthentication = FINGERPRINT ;
 
-						Users.usmKeypadPassword[Users.ucmCurrentEnrollmentNumber] = GetEnrollmentPassword() ;
-						Users.ucmCurrentEnrollmentNumber ++ ;
-
-						SetupAuthentication() ;
-
-						Mode.ucmStepOrEnroll = ONE_STEP_AUTHENTICATION ;
-						Mode.ucmModeOfAuthentication = KEYPAD ;
+//						Users.usmKeypadPassword[Users.usmCurrentEnrollmentNumber] = GetEnrollmentPassword() ;
+//						Users.usmCurrentEnrollmentNumber ++ ;
+//
+//						WriteFlash() ;
+//
+//						SetupAuthentication() ;
+//
+//						Mode.ucmStepOrEnroll = ONE_STEP_AUTHENTICATION ;
+//						Mode.ucmModeOfAuthentication = KEYPAD ;
 					}
 
 						break ;
@@ -171,8 +175,10 @@ void ModeProcess(void)
 						{
 							Mode.ucmModeOfAuthentication = FACE ;
 
-							Users.usmKeypadPassword[Users.ucmCurrentEnrollmentNumber] = GetEnrollmentPassword() ;
-							Users.ucmCurrentEnrollmentNumber ++ ;
+							Users.usmKeypadPassword[Users.usmCurrentEnrollmentNumber] = GetEnrollmentPassword() ;
+							Users.usmCurrentEnrollmentNumber ++ ;
+
+							WriteFlash() ;
 
 							SetupAuthentication() ;
 
@@ -188,8 +194,10 @@ void ModeProcess(void)
 
 						if(GetFaceEnrollmentState() EQ ENROLL_SUCCESS_FACE)
 						{
-							Users.usmKeypadPassword[Users.ucmCurrentEnrollmentNumber] = GetEnrollmentPassword() ;
-							Users.ucmCurrentEnrollmentNumber ++ ;
+							Users.usmKeypadPassword[Users.usmCurrentEnrollmentNumber] = GetEnrollmentPassword() ;
+							Users.usmCurrentEnrollmentNumber ++ ;
+
+							WriteFlash() ;
 
 							SetupAuthentication() ;
 
@@ -655,13 +663,14 @@ void UpadateSolenoidLockTime(void)
 * Arguments    : None
 * Return Value : None
 **************************************************************************************************************************************************************/
-void UnlockDoor(uint8_t ucmAuthType ,uint8_t ucmUserActionType)
+void UnlockDoor(uint8_t ucmAuthType ,uint8_t ucmUserActionType , uint8_t ucmUserID)
 {
 	GPIO_PinOutSet(SOLENOID_PIN_PORT , SOLENOID_PIN);
 	SolenoidLock.usmLockIterator = DOOR_AUTOMATIC_LOCK_TIME ;
 	SolenoidLock.ucmLockStatus = UNLOCKED ;
 	doorStateInfoData.authType = ucmAuthType;
 	doorStateInfoData.lockStatus = DMP_DOOR_UNLOCK;
+	doorStateInfoData.userId = ucmUserID ;
 	//doorStateInfoData.userActionType = ucmUserActionType;
 }
 

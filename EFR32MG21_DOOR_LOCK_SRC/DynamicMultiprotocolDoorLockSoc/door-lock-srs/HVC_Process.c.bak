@@ -25,13 +25,15 @@ void FacePrintEnrollment(void)
 
 	//pImage = (HVC_IMAGE *)calloc(1,sizeof(HVC_IMAGE));
 
+	memset(&pImage , 0 ,sizeof(pImage)) ;
+
 	switch(FaceEnroll.ucmEnrollmentState)
 	{
 		case ENROLL_ENTER_FACE :
 
 			if(FaceEnroll.usmDelayBetweenFaceEnrollments EQ ZERO)
 			{
-				slmRet = HVC_Registration(TIMEOUT_ENROLL_FACE,(Users.ucmCurrentEnrollmentNumber + 1),1,&pImage,&ucmOutStatus) ;
+				slmRet = HVC_Registration(TIMEOUT_ENROLL_FACE,(Users.usmCurrentEnrollmentNumber + 1),1,&pImage,&ucmOutStatus) ;
 
 				if(slmRet EQ ZERO)
 				{
@@ -58,7 +60,7 @@ void FacePrintEnrollment(void)
 
 			if(FaceEnroll.usmDelayBetweenFaceEnrollments EQ ZERO)
 			{
-				slmRet = HVC_Registration(TIMEOUT_ENROLL_FACE,(Users.ucmCurrentEnrollmentNumber + 1),2,&pImage,&ucmOutStatus) ;
+				slmRet = HVC_Registration(TIMEOUT_ENROLL_FACE,(Users.usmCurrentEnrollmentNumber + 1),2,&pImage,&ucmOutStatus) ;
 				if(slmRet EQ ZERO)
 				{
 					if(ucmOutStatus EQ ZERO)
@@ -152,6 +154,8 @@ void FaceAuthentication(void)
 	uint8_t ucmOutStatus ;
 	int32_t slmRet ;
 	//Result = (HVC_RESULT *)calloc(1,sizeof(HVC_RESULT));
+
+	memset(&Result , 0 ,sizeof(Result)) ;
 
 	switch(FaceAuthenticate.ucmAuthenticationState)
 	{

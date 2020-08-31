@@ -36,6 +36,8 @@ void KeypadEnrollment(void)
 		ssmKeyPressed = ZERO ;
 	}
 
+	RefreshIdleStateTimer() ;
+
 	switch(KeypadEnroll.ucmEnrollmentState)
 	{
 		case ENROLL_ENTER_PASSWORD :
@@ -191,6 +193,8 @@ void KeypadAuthentication(void)
 	{
 		ssmKeyPressed = ZERO ;
 	}
+
+	RefreshIdleStateTimer() ;
 
 	switch(KeypadAuthenticate.ucmAuthenticationState)
 	{

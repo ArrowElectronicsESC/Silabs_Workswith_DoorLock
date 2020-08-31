@@ -95,7 +95,7 @@
 #define FPS_CMD_SCANANDRANGESEARCH    0x32U    //read total template count
 #define FPS_CMD_SCANANDFULLSEARCH     0x34U    //read total template count
 
-#define FPS_NOTEPAD_TIMEOUT            200  //UART reading timeout in milliseconds
+#define FPS_NOTEPAD_TIMEOUT            		200  //UART reading timeout in milliseconds
 #define FPS_DEFAULT_TIMEOUT                 2000  //UART reading timeout in milliseconds
 #define FPS_FULL_SEARCH_TIMEOUT				3000
 #define FPS_DEFAULT_BAUDRATE                57600 //9600*6
