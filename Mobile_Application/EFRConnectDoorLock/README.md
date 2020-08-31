@@ -7,13 +7,11 @@ This is the source code for the EFR Connect mobile application.
 
 The Silicon Labs EFR Connect app utilizes the Bluetooth adapter on your phone/tablet to scan, connect and interact with BLE devices.
 
-The app is divided into two main functional areas, the demo and the develop view.
-
 The demo view lists a number of demos that are meant for quickly testing some of the sample apps in the Silicon Labs Bluetooth SDK. The currently supported demos are:
 
-- **Health Thermometer demo:** Connects to an EFR32/BGM device running the soc-thermometer sample application from the Bluetooth SDK and displays the temperature read from the SI7021 sensor on the WSTK mainboard.
+- **Door Lock demo:** Connects to an EFR32 device running the door lock soc sample application from the Bluetooth SDK and displays the door lock status on efr-connect door lock mobile app.
 
-The develop view contains functionalities focused on helping developers create and troubleshoot their Bluetooth applications based on EFR32/BGM devices. The currently supported functionalities are:
+The currently supported functionalities are:
 
 - **Bluetooth Browser:** This is a generic and powerful tool that allows you to explore the BLE devices around you. Key features of the browser include:
   - Scan results with rich data set
@@ -27,7 +25,7 @@ The develop view contains functionalities focused on helping developers create a
     - Device name
     - Raw advertisement data
     - RSSI
-    - Beacon type (iBeacon, Eddystone, AtlBeacon)
+    - Beacon type (Eddystone)
     - Favorites only
     - Connectable only
   - Option to save filters for later use
@@ -41,7 +39,7 @@ The develop view contains functionalities focused on helping developers create a
 
 
 ## Additional information
-The app can be found on the [Google PlayStore](https://play.google.com/store/apps/details?id=com.siliconlabs.eic.doorlock&hl=en) and [Apple App Store](https://apps.apple.com/us/app/blue-gecko/id1030932759).
+The app can be found on the https://github.com/ArrowElectronicsESC/Silabs_Workswith_DoorLock/blob/master/Mobile_Application/EFRConnect-DoorLock-v1.0.8_200822.s.apk
 
 For more information on Silicon Labs product portfolio please visit [www.silabs.com](https://www.silabs.com). 
 
