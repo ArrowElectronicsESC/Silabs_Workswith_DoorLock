@@ -1,5 +1,5 @@
-# EFR Connect Mobile Application
-This is the source code for the EFR Connect mobile application.
+# EFR Connect Door Lock Mobile Application
+This is the source code for the EFR Connect door lock mobile application.
 
 
 
