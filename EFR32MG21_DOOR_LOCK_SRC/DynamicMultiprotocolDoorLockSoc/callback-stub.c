@@ -1849,7 +1849,7 @@ void emberAfPluginMicriumRtosAppTask1InitCallback(void)
  */
 void emberAfPluginMicriumRtosAppTask1MainLoopCallback(void *p_arg)
 {
-  DeleteAllUsers() ;
+ // DeleteAllUsers() ;
   ReadFlash() ;
   while (true) {
 	    ModeProcess() ;
