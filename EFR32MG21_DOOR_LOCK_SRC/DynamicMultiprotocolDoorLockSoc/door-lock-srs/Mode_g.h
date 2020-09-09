@@ -28,5 +28,6 @@ void LockDoor(void) ;
 void SetControllerToIdleMode(void) ;
 void UpdateIdleState(void) ;
 void RefreshIdleStateTimer(void) ;
+void DeleteAllUsers(void) ;
 
 #endif /* MODE_G_H_ */

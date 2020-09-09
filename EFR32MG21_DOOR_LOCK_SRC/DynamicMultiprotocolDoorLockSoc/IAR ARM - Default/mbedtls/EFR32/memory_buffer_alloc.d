@@ -1,5 +1,5 @@
 mbedtls/EFR32/memory_buffer_alloc.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\third_party\mbedtls\library\memory_buffer_alloc.c
-mbedtls/EFR32/memory_buffer_alloc.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
+mbedtls/EFR32/memory_buffer_alloc.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
 mbedtls/EFR32/memory_buffer_alloc.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stddef.h
 mbedtls/EFR32/memory_buffer_alloc.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h
 mbedtls/EFR32/memory_buffer_alloc.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\yvals.h

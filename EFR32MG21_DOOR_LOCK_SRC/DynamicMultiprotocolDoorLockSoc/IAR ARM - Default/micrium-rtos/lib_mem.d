@@ -100,8 +100,8 @@ micrium-rtos/lib_mem.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_
 micrium-rtos/lib_mem.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\micrium_os\common\include\rtos_version.h
 micrium-rtos/lib_mem.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin-soc\micrium-rtos\config\os_cfg.h
 micrium-rtos/lib_mem.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\config.h
-micrium-rtos/lib_mem.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
-micrium-rtos/lib_mem.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
+micrium-rtos/lib_mem.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
+micrium-rtos/lib_mem.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
 micrium-rtos/lib_mem.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\security\security-config.h
 micrium-rtos/lib_mem.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin-soc\micrium-rtos\config\os_cfg_app.h
 micrium-rtos/lib_mem.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\micrium_os\kernel\include\os_type.h

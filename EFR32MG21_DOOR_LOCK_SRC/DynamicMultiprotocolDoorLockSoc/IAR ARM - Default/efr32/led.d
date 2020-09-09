@@ -72,7 +72,7 @@ efr32/led.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v
 efr32/led.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_assert.h
 efr32/led.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\generic\compiler\platform-common.h
 efr32/led.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\led.h
-efr32/led.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\hal-config\hal-config.h
+efr32/led.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\hal-config\hal-config.h
 efr32/led.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h
 efr32/led.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_gpio.h
 efr32/led.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_bus.h

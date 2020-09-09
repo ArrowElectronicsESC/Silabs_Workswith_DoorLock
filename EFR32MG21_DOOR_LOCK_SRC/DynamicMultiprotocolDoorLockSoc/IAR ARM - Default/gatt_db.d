@@ -1,4 +1,4 @@
-gatt_db.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\gatt_db.c
+gatt_db.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\gatt_db.c
 gatt_db.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdint.h
 gatt_db.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h
 gatt_db.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\yvals.h

@@ -216,6 +216,7 @@ void ModeProcess(void)
 	if(SolenoidLock.ucmLockNotify EQ TRUE )
 	{
 		SolenoidLock.ucmLockNotify = FALSE;
+
 		notifyDoorStatus(&doorStateInfoData);
 	}
     
@@ -531,6 +532,15 @@ void InitLedVariables(void)
 	Led.ucmGreenLedStatus	= OFF ;
 	Led.ucmRedLedStatus		= OFF ;
 	SolenoidLock.ucmLockNotify = TRUE ;
+
+	if(SolenoidLock.ucmLockStatus EQ UNLOCKED)
+	{
+		doorStateInfoData.lockStatus = DMP_DOOR_UNLOCK ;
+	}
+	else
+	{
+		doorStateInfoData.lockStatus = DMP_DOOR_LOCK ;
+	}
 }
 
 
@@ -804,4 +814,31 @@ void EnableModulesForIdleMode(void)
 void DisableModulesForIdleMode(void)
 {
 	GPIO_PinOutClear(MODULE_DISABLE_PIN_PORT , MODULE_DISABLE_PIN);
+}
+
+
+/*************************************************************************************************************************************************************
+* Author 	   : Prassanna Sakore
+* Function Name: DeleteAllUsers
+* Description  : This function deletes all the users stored
+* Arguments    : None
+* Return Value : None
+**************************************************************************************************************************************************************/
+void DeleteAllUsers(void)
+{
+	uint8_t ucmOutStatus ;
+	uint8_t uccData[32] = {0};
+
+	HVC_DeleteAll(2000, &ucmOutStatus) ;
+	HVC_WriteAlbum(5000, &ucmOutStatus) ;
+	ClearLibrary() ;
+
+	WriteNotepad(0 , uccData) ;
+	WriteNotepad(1 , uccData) ;
+	WriteNotepad(2 , uccData) ;
+	WriteNotepad(3 , uccData) ;
+	WriteNotepad(4 , uccData) ;
+	WriteNotepad(5 , uccData) ;
+	WriteNotepad(6 , uccData) ;
+
 }

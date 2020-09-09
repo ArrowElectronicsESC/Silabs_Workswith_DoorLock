@@ -221,24 +221,33 @@ void KeypadAuthentication(void)
 
 		case AUTHENTICATE_MATCH_PASSWORD :
 
-			for(ucmUser = 0 ; ucmUser < Users.usmCurrentEnrollmentNumber ; ucmUser++ )
+			if(Users.usmCurrentEnrollmentNumber > 0)
 			{
-				if(Users.usmKeypadPassword[ucmUser] EQ KeypadAuthenticate.usmPassword)
+				for(ucmUser = 0 ; ucmUser < Users.usmCurrentEnrollmentNumber ; ucmUser++ )
 				{
-					KeypadAuthenticate.usmPassword = CLEAR ;
-					KeypadAuthenticate.ucmUserNo = (ucmUser + 1) ;
-					KeypadAuthenticate.ucmAuthenticationState = AUTHENTICATE_SUCCESS_PASSWORD ;
-					SetGreenLedForGreenSuccess() ;
-					break ;
-				}
+					if(Users.usmKeypadPassword[ucmUser] EQ KeypadAuthenticate.usmPassword)
+					{
+						KeypadAuthenticate.usmPassword = CLEAR ;
+						KeypadAuthenticate.ucmUserNo = (ucmUser + 1) ;
+						KeypadAuthenticate.ucmAuthenticationState = AUTHENTICATE_SUCCESS_PASSWORD ;
+						SetGreenLedForGreenSuccess() ;
+						break ;
+					}
 
-				if(ucmUser EQ (Users.usmCurrentEnrollmentNumber - 1))
-				{
-					KeypadAuthenticate.usmPassword = CLEAR ;
-					KeypadAuthenticate.ucmAuthenticationState = AUTHENTICATE_ENTER_PASSWORD ;
-					SetRedLedForFail() ;
-				}
+					if(ucmUser EQ (Users.usmCurrentEnrollmentNumber - 1))
+					{
+						KeypadAuthenticate.usmPassword = CLEAR ;
+						KeypadAuthenticate.ucmAuthenticationState = AUTHENTICATE_ENTER_PASSWORD ;
+						SetRedLedForFail() ;
+					}
 
+				}
+			}
+			else
+			{
+				KeypadAuthenticate.usmPassword = CLEAR ;
+				KeypadAuthenticate.ucmAuthenticationState = AUTHENTICATE_ENTER_PASSWORD ;
+				SetRedLedForFail() ;
 			}
 
 			break ;

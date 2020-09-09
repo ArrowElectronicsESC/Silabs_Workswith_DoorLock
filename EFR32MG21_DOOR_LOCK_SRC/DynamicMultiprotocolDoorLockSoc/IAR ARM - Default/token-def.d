@@ -75,8 +75,8 @@ token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\ember-types.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\config\ember-configuration-defaults.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\config.h
-token-def.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
-token-def.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
+token-def.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
+token-def.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\security\security-config.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\ember-static-struct.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\error.h
@@ -106,7 +106,7 @@ token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\mac-layer.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\ember-random-api.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\random.h
-token-def.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
+token-def.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\third_party\mbedtls\configs\config-device-acceleration.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_se.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\plugin\plugin-common\mbedtls\config-device-acceleration-app.h
@@ -118,10 +118,10 @@ token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\config\token-phy.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\zll\zll-token-config.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\gp\gp-token-config.h
-token-def.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\znet-token.h
-token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\tokens.h
+token-def.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\znet-token.h
+token-def.o: c:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\tokens.h
 token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\include\af-types.h
-token-def.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\enums.h
-token-def.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_tokens.h
-token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin\scenes\scenes-tokens.h
-token-def.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin\reporting\reporting-tokens.h
+token-def.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\enums.h
+token-def.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_tokens.h
+token-def.o: c:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin\scenes\scenes-tokens.h
+token-def.o: c:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin\reporting\reporting-tokens.h

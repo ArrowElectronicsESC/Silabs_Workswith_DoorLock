@@ -88,8 +88,8 @@ micrium-rtos/EFR32/armv7m_os_cpu_c.o: C:\SiliconLabs\SimplicityStudio\v4\develop
 micrium-rtos/EFR32/armv7m_os_cpu_c.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin-soc\micrium-rtos\config\rtos_cfg.h
 micrium-rtos/EFR32/armv7m_os_cpu_c.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin-soc\micrium-rtos\config\os_cfg.h
 micrium-rtos/EFR32/armv7m_os_cpu_c.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\config.h
-micrium-rtos/EFR32/armv7m_os_cpu_c.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
-micrium-rtos/EFR32/armv7m_os_cpu_c.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
+micrium-rtos/EFR32/armv7m_os_cpu_c.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
+micrium-rtos/EFR32/armv7m_os_cpu_c.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
 micrium-rtos/EFR32/armv7m_os_cpu_c.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\security\security-config.h
 micrium-rtos/EFR32/armv7m_os_cpu_c.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin-soc\micrium-rtos\config\os_cfg_app.h
 micrium-rtos/EFR32/armv7m_os_cpu_c.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\micrium_os\kernel\include\os_type.h

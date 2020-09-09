@@ -74,8 +74,8 @@ coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio
 coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\ember-types.h
 coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\config\ember-configuration-defaults.h
 coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\config.h
-coexistence-stub/EFR32/coulomb-counter-802154.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
-coexistence-stub/EFR32/coulomb-counter-802154.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
+coexistence-stub/EFR32/coulomb-counter-802154.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
+coexistence-stub/EFR32/coulomb-counter-802154.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
 coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\security\security-config.h
 coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\ember-static-struct.h
 coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\error.h
@@ -86,7 +86,7 @@ coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio
 coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_prs.h
 coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_gpio.h
 coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_bus.h
-coexistence-stub/EFR32/coulomb-counter-802154.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\hal-config\hal-config.h
+coexistence-stub/EFR32/coulomb-counter-802154.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\hal-config\hal-config.h
 coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h
 coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\radio\rail_lib\plugin\coexistence\common\coexistence.h
 coexistence-stub/EFR32/coulomb-counter-802154.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emdrv\gpiointerrupt\inc\gpiointerrupt.h

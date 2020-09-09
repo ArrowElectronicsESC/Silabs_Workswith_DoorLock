@@ -10,7 +10,7 @@ mbedtls/EFR32/radioaes_ble.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Wo
 mbedtls/EFR32/radioaes_ble.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdint.h
 mbedtls/EFR32/radioaes_ble.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdbool.h
 mbedtls/EFR32/radioaes_ble.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\third_party\mbedtls\include\mbedtls\ccm.h
-mbedtls/EFR32/radioaes_ble.o: C:\Users\hardik.patel\SimplicityStudio\v4_workspace\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
+mbedtls/EFR32/radioaes_ble.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
 mbedtls/EFR32/radioaes_ble.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\third_party\mbedtls\configs\config-device-acceleration.h
 mbedtls/EFR32/radioaes_ble.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\Device\SiliconLabs\EFR32MG21\Include\em_device.h
 mbedtls/EFR32/radioaes_ble.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\Device\SiliconLabs\EFR32MG21\Include\efr32mg21a020f1024im32.h
