@@ -60,7 +60,7 @@ mbedtls/EFR32/radioaes.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\geck
 mbedtls/EFR32/radioaes.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\Device\SiliconLabs\EFR32MG21\Include\efr32mg21_dma_descriptor.h
 mbedtls/EFR32/radioaes.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\Device\SiliconLabs\EFR32MG21\Include\efr32mg21_ldmaxbar_defines.h
 mbedtls/EFR32/radioaes.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\third_party\mbedtls\sl_crypto\include\radioaes.h
-mbedtls/EFR32/radioaes.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
+mbedtls/EFR32/radioaes.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
 mbedtls/EFR32/radioaes.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stddef.h
 mbedtls/EFR32/radioaes.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ysizet.h
 mbedtls/EFR32/radioaes.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\third_party\mbedtls\configs\config-device-acceleration.h
@@ -102,8 +102,8 @@ mbedtls/EFR32/radioaes.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\geck
 mbedtls/EFR32/radioaes.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin-soc\micrium-rtos\config\rtos_cfg.h
 mbedtls/EFR32/radioaes.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin-soc\micrium-rtos\config\os_cfg.h
 mbedtls/EFR32/radioaes.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\config.h
-mbedtls/EFR32/radioaes.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
-mbedtls/EFR32/radioaes.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
+mbedtls/EFR32/radioaes.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
+mbedtls/EFR32/radioaes.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
 mbedtls/EFR32/radioaes.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\security\security-config.h
 mbedtls/EFR32/radioaes.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin-soc\micrium-rtos\config\os_cfg_app.h
 mbedtls/EFR32/radioaes.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\micrium_os\kernel\include\os_type.h

@@ -26,10 +26,28 @@ void KeypadEnrollment(void)
 		ssmKeyPressed = GetKey() ;
 	}
 
+	if(ssmKeyPressed EQ KEY_USED_FOR_DELETE)
+	{
+		SetGreenLedForUserAction() ;
+
+		KeypadEnroll.ucmKeyDeleteUserCount ++ ;
+
+		if(KeypadEnroll.ucmKeyDeleteUserCount >= 3)
+		{
+			KeypadEnroll.ucmKeyDeleteUserCount = ZERO ;
+			DeleteAllUsers() ;
+			ReadFlash() ;
+			SetGreenLedForGreenSuccess() ;
+		}
+
+	}
+
 	if((ssmKeyPressed EQ KEYS_NOT_PRESSED) OR (ssmKeyPressed > NO_OF_KEYS_TO_USE))
 	{
 		return ;
 	}
+
+	KeypadEnroll.ucmKeyDeleteUserCount = ZERO ;
 
 	if(ssmKeyPressed EQ KEY_USED_FOR_ZERO)
 	{
@@ -128,6 +146,7 @@ void SetupKeypadEnrollment(void)
 	KeypadEnroll.usmReEnterPassword = CLEAR ;
 	KeypadEnroll.ucmEnrollmentState = ENROLL_ENTER_PASSWORD ;
 	KeypadEnroll.ucmPasswordDigitNo = CLEAR ;
+	KeypadEnroll.ucmKeyDeleteUserCount = ZERO ;
 
 }
 

@@ -1,4 +1,4 @@
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\znet-bookkeeping.c
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\znet-bookkeeping.c
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\compiler\iar.h
 znet-bookkeeping.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stddef.h
 znet-bookkeeping.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h
@@ -72,8 +72,8 @@ znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_assert.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\generic\compiler\platform-common.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\config.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\security\security-config.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\include\af.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\ember.h
@@ -107,7 +107,7 @@ znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\mac-layer.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\ember-random-api.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\random.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\third_party\mbedtls\configs\config-device-acceleration.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_se.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\plugin\plugin-common\mbedtls\config-device-acceleration-app.h
@@ -131,7 +131,7 @@ znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\nvic-config.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\efr32\nvic-config-series2-config1.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\config\emlib_config.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\hal-config\hal-config.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\hal-config\hal-config.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\ember-hal-config.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\plugin\antenna\antenna.h
@@ -166,16 +166,16 @@ znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\mfg-token.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\token-manufacturing.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\token-manufacturing-series-2.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\znet-mfg-token.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\znet-mfg-token.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\config\token-stack.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\config\token-phy.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\zll\zll-token-config.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\gp\gp-token-config.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\znet-token.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\znet-token.h
 znet-bookkeeping.o: c:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\tokens.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\include\af-types.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\enums.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_tokens.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\enums.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_tokens.h
 znet-bookkeeping.o: c:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin\scenes\scenes-tokens.h
 znet-bookkeeping.o: c:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin\reporting\reporting-tokens.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\bootloader-interface.h
@@ -191,14 +191,14 @@ znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\symbol-timer.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\plugin\serial\serial.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\print.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\debug-printing.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\debug-printing.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\time-util.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\af-structs.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\attribute-id.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\att-storage.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\attribute-type.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\call-command-handler.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\callback.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\af-structs.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\attribute-id.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\att-storage.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\attribute-type.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\call-command-handler.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\callback.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\bluetooth\ble_stack\inc\soc\rtos_bluetooth.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\bluetooth\ble_stack\inc\soc\rtos_gecko.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\bluetooth\ble_stack\inc\common\bg_types.h
@@ -234,10 +234,10 @@ znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\service\sleeptimer\config\sl_sleeptimer_config.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\common\inc\sl_status.h
 znet-bookkeeping.o: c:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\plugin\plugin-common\eeprom\eeprom.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\client-command-macro.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\cluster-id.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\command-id.h
-znet-bookkeeping.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\print-cluster.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\client-command-macro.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\cluster-id.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\command-id.h
+znet-bookkeeping.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\print-cluster.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\client-api.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\util\serial\command-interpreter2.h
 znet-bookkeeping.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\cli\zcl-cli.h

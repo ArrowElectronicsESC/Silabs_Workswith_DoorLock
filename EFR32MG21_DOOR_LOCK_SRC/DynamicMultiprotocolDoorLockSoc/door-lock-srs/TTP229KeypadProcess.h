@@ -11,7 +11,7 @@
 #define NO_OF_PASSWORD_DIGITS 		4
 #define NO_OF_KEYS_TO_USE 			10
 #define KEY_USED_FOR_ZERO			10
-
+#define KEY_USED_FOR_DELETE			16 // should be > 10
 
 
 typedef struct
@@ -20,6 +20,7 @@ typedef struct
     uint8_t ucmPasswordDigitNo ;
     uint16_t usmPassword ;
     uint16_t usmReEnterPassword ;
+    uint8_t ucmKeyDeleteUserCount ;
 }TagKeypadEnroll;
 
 TagKeypadEnroll KeypadEnroll ;

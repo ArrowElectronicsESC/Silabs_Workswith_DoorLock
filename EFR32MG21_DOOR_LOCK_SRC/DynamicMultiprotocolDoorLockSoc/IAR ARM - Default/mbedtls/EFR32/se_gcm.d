@@ -59,7 +59,7 @@ mbedtls/EFR32/se_gcm.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_
 mbedtls/EFR32/se_gcm.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\Device\SiliconLabs\EFR32MG21\Include\efr32mg21_prs_signals.h
 mbedtls/EFR32/se_gcm.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\Device\SiliconLabs\EFR32MG21\Include\efr32mg21_dma_descriptor.h
 mbedtls/EFR32/se_gcm.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\Device\SiliconLabs\EFR32MG21\Include\efr32mg21_ldmaxbar_defines.h
-mbedtls/EFR32/se_gcm.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
+mbedtls/EFR32/se_gcm.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
 mbedtls/EFR32/se_gcm.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stddef.h
 mbedtls/EFR32/se_gcm.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ysizet.h
 mbedtls/EFR32/se_gcm.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\third_party\mbedtls\configs\config-device-acceleration.h

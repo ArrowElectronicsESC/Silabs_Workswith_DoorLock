@@ -112,7 +112,7 @@ DynamicMultiprotocolDoorLockSoc.out: $(OBJS) $(USER_OBJS)
 	echo. $(foreach file,$(OBJS), $(file)) >> ilinkCommandLine_DynamicMultiprotocolDoorLockSoc.out.xcl
 	echo. $(foreach file,$(USER_OBJS), $(file)) >> ilinkCommandLine_DynamicMultiprotocolDoorLockSoc.out.xcl
 	@echo 'Invoking linker reading args from file: ilinkCommandLine_DynamicMultiprotocolDoorLockSoc.out.xcl'
-	ilinkarm -f "D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\IAR ARM - Default\ilinkCommandLine_DynamicMultiprotocolDoorLockSoc.out.xcl" 
+	ilinkarm -f "D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\IAR ARM - Default\ilinkCommandLine_DynamicMultiprotocolDoorLockSoc.out.xcl" 
 	ielftool --srec --verbose "DynamicMultiprotocolDoorLockSoc.out" "DynamicMultiprotocolDoorLockSoc.s37"  
 	ielftool --ihex --verbose "DynamicMultiprotocolDoorLockSoc.out" "DynamicMultiprotocolDoorLockSoc.hex"  
 	ielftool --bin --verbose "DynamicMultiprotocolDoorLockSoc.out" "DynamicMultiprotocolDoorLockSoc.bin"
@@ -126,11 +126,11 @@ clean:
 	-@echo ' '
 
 pre-build:
-	-cmd //c 'D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc-prebuild.bat' 'DynamicMultiprotocolDoorLockSoc' 'D:/hardik/prassana/DynamicMultiprotocolDoorLockSoc' 'C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.4/arm' 'C:\SiliconLabs\SimplicityStudio\v4'
+	-cmd //c 'D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc-prebuild.bat' 'DynamicMultiprotocolDoorLockSoc' 'D:/github/Silabs_Workswith_DoorLock/EFR32MG21_DOOR_LOCK_SRC/DynamicMultiprotocolDoorLockSoc' 'C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.4/arm' 'C:\SiliconLabs\SimplicityStudio\v4'
 	-@echo ' '
 
 post-build:
-	-cmd //c 'D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc-postbuild.bat' 'DynamicMultiprotocolDoorLockSoc' 'D:/hardik/prassana/DynamicMultiprotocolDoorLockSoc' 'C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.4/arm' 'C:\SiliconLabs\SimplicityStudio\v4'
+	-cmd //c 'D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc-postbuild.bat' 'DynamicMultiprotocolDoorLockSoc' 'D:/github/Silabs_Workswith_DoorLock/EFR32MG21_DOOR_LOCK_SRC/DynamicMultiprotocolDoorLockSoc' 'C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.4/arm' 'C:\SiliconLabs\SimplicityStudio\v4'
 	-@echo ' '
 
 .PHONY: all clean dependents

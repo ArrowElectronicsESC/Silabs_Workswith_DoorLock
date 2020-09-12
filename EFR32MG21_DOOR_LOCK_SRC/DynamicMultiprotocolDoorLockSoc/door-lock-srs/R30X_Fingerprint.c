@@ -1216,8 +1216,8 @@ uint8_t SearchLibrary (uint8_t ucmBufferId , uint16_t usmStartLocation , uint16_
   }
 
   uccDataArray[4] = ucmBufferId ;
-  uccDataArray[3] = (usmStartLocation >> 8) & 0xFFU ;  //high byte
-  uccDataArray[2] = (usmStartLocation & 0xFFU) ; //low byte
+  uccDataArray[3] = ((usmStartLocation - 1) >> 8) & 0xFFU ;  //high byte
+  uccDataArray[2] = ((usmStartLocation - 1) & 0xFFU) ; //low byte
   uccDataArray[1] = (usmCount >> 8) & 0xFFU ; //high byte
   uccDataArray[0] = (usmCount & 0xFFU) ; //low byte
 

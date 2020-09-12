@@ -159,24 +159,34 @@ void FingerAuthentication(void)
 	{
 		case AUTHENTICATE_ENTER_FINGER :
 
-				ucmResponse = CaptureAndRangeSearch(3000, 1, (Users.usmCurrentEnrollmentNumber + 1)) ;
-
-				if(ucmResponse EQ FPS_RESP_OK)
+				if(GenerateImage() EQ FPS_RX_OK)
 				{
-					if(GetMatchScore() >= MIN_FINGER_MATCH_SCORE)
+					if(GenerateCharacter(1) EQ FPS_RESP_OK)
 					{
-						SetGreenLedForGreenSuccess() ;
-						FingerAuthenticate.ucmAuthenticationState = AUTHENTICATE_SUCCESS_FINGER ;
-						FingerAuthenticate.ucmUserNo = GetFingerID() ;
+						ucmResponse = SearchLibrary(1, 1, (Users.usmCurrentEnrollmentNumber)) ;
+
+						if(ucmResponse EQ FPS_RESP_OK)
+						{
+							if(GetMatchScore() >= MIN_FINGER_MATCH_SCORE)
+							{
+								SetGreenLedForGreenSuccess() ;
+								FingerAuthenticate.ucmAuthenticationState = AUTHENTICATE_SUCCESS_FINGER ;
+								FingerAuthenticate.ucmUserNo = GetFingerID() ;
+							}
+							else
+							{
+								SetRedLedForFail() ;
+							}
+						}
+						else if(ucmResponse NEQ FPS_RX_TIMEOUT)
+						{
+							SetRedLedForFail() ;
+						}
 					}
 					else
 					{
 						SetRedLedForFail() ;
 					}
-				}
-				else if(ucmResponse NEQ FPS_RX_TIMEOUT)
-				{
-					SetRedLedForFail() ;
 				}
 
 			break ;

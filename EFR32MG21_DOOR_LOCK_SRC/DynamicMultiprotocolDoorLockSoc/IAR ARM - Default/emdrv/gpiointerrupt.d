@@ -1,4 +1,4 @@
-emdrv/gpiointerrupt.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\emdrv\gpiointerrupt.c
+emdrv/gpiointerrupt.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\emdrv\gpiointerrupt.c
 emdrv/gpiointerrupt.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_gpio.h
 emdrv/gpiointerrupt.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\Device\SiliconLabs\EFR32MG21\Include\em_device.h
 emdrv/gpiointerrupt.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\Device\SiliconLabs\EFR32MG21\Include\efr32mg21a020f1024im32.h

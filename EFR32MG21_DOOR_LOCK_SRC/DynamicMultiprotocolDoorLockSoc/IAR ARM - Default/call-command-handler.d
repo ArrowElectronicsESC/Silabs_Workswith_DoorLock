@@ -1,4 +1,4 @@
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\call-command-handler.c
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\call-command-handler.c
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\compiler\iar.h
 call-command-handler.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stddef.h
 call-command-handler.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h
@@ -75,8 +75,8 @@ call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\ember-types.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\config\ember-configuration-defaults.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\config.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_endpoint_config.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\security\security-config.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\ember-static-struct.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\error.h
@@ -106,7 +106,7 @@ call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\mac-layer.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\include\ember-random-api.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\random.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\mbedtls-config-generated.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\third_party\mbedtls\configs\config-device-acceleration.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_se.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\plugin\plugin-common\mbedtls\config-device-acceleration-app.h
@@ -132,7 +132,7 @@ call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\nvic-config.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\efr32\nvic-config-series2-config1.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\config\emlib_config.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\hal-config\hal-config.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\hal-config\hal-config.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\ember-hal-config.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\plugin\antenna\antenna.h
@@ -167,16 +167,16 @@ call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\mfg-token.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\token-manufacturing.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\cortexm3\efm32\token-manufacturing-series-2.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\znet-mfg-token.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\znet-mfg-token.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\config\token-stack.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\config\token-phy.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\zll\zll-token-config.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\stack\gp\gp-token-config.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\znet-token.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\znet-token.h
 call-command-handler.o: c:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\tokens.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\include\af-types.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\enums.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_tokens.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\enums.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\DynamicMultiprotocolDoorLockSoc_tokens.h
 call-command-handler.o: c:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin\scenes\scenes-tokens.h
 call-command-handler.o: c:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\plugin\reporting\reporting-tokens.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\bootloader-interface.h
@@ -192,14 +192,14 @@ call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\micro\symbol-timer.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\base\hal\plugin\serial\serial.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\print.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\debug-printing.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\debug-printing.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\time-util.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\af-structs.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\attribute-id.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\att-storage.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\attribute-type.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\call-command-handler.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\callback.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\af-structs.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\attribute-id.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\att-storage.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\attribute-type.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\call-command-handler.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\callback.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\bluetooth\ble_stack\inc\soc\rtos_bluetooth.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\bluetooth\ble_stack\inc\soc\rtos_gecko.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\bluetooth\ble_stack\inc\common\bg_types.h
@@ -235,10 +235,10 @@ call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\service\sleeptimer\config\sl_sleeptimer_config.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\common\inc\sl_status.h
 call-command-handler.o: c:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\util\plugin\plugin-common\eeprom\eeprom.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\client-command-macro.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\cluster-id.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\command-id.h
-call-command-handler.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\print-cluster.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\client-command-macro.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\cluster-id.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\command-id.h
+call-command-handler.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\print-cluster.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\util\client-api.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\util\serial\command-interpreter2.h
 call-command-handler.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\protocol\zigbee\app\framework\cli\zcl-cli.h

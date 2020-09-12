@@ -1,5 +1,5 @@
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\ButtonProcess.c
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Global.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\ButtonProcess.c
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Global.h
 door-lock-srs/ButtonProcess.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\string.h
 door-lock-srs/ButtonProcess.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h
 door-lock-srs/ButtonProcess.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\yvals.h
@@ -10,7 +10,7 @@ door-lock-srs/ButtonProcess.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ W
 door-lock-srs/ButtonProcess.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Product_string.h
 door-lock-srs/ButtonProcess.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdlib.h
 door-lock-srs/ButtonProcess.o: c:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Product_stdlib.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Macro.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Macro.h
 door-lock-srs/ButtonProcess.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\Device\SiliconLabs\EFR32MG21\Include\em_device.h
 door-lock-srs/ButtonProcess.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\Device\SiliconLabs\EFR32MG21\Include\efr32mg21a020f1024im32.h
 door-lock-srs/ButtonProcess.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\CMSIS\Include\core_cm33.h
@@ -77,22 +77,22 @@ door-lock-srs/ButtonProcess.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks
 door-lock-srs/ButtonProcess.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_i2c.h
 door-lock-srs/ButtonProcess.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_timer.h
 door-lock-srs/ButtonProcess.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\emlib\inc\em_usart.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\hal-config\hal-config.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\hal-config\hal-config.h
 door-lock-srs/ButtonProcess.o: C:\SiliconLabs\SimplicityStudio\v4\developer\sdks\gecko_sdk_suite\v2.7\platform\halconfig\inc\hal-config\hal-config-types.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Button_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\ButtonProcess_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Controller_Spec_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Timer_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Init_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Mode_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\TwoWire_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Users_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\TTP229Keypad_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\TTP229KeypadProcess_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\UART0_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\UART1_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\R30X_Fingerprint_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\R30X_FingerprintProcess_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\HVC_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\HVC_Process_g.h
-door-lock-srs/ButtonProcess.o: D:\hardik\prassana\DynamicMultiprotocolDoorLockSoc\door-lock-srs\ButtonProcess.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Button_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\ButtonProcess_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Controller_Spec_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Timer_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Init_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Mode_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\TwoWire_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\Users_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\TTP229Keypad_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\TTP229KeypadProcess_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\UART0_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\UART1_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\R30X_Fingerprint_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\R30X_FingerprintProcess_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\HVC_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\HVC_Process_g.h
+door-lock-srs/ButtonProcess.o: D:\github\Silabs_Workswith_DoorLock\EFR32MG21_DOOR_LOCK_SRC\DynamicMultiprotocolDoorLockSoc\door-lock-srs\ButtonProcess.h
